@@ -7,7 +7,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Dino Nuggets entree item
     /// </summary>
-    public class DinoNuggets
+    public class DinoNuggets : Entree
     {
         /// <summary>
         /// private ingredients list of the Dino Nuggets
@@ -15,19 +15,9 @@ namespace DinoDiner.Menu.Entrees
         private List<string> ingredients;
 
         /// <summary>
-        /// Price of the Dino Nuggets
-        /// </summary>
-        public double Price { get; set; }
-
-        /// <summary>
-        /// Colories of the Dino Nuggets
-        /// </summary>
-        public uint Calories { get; set; }
-
-        /// <summary>
         /// Ingredients of the Dino Nuggets
         /// </summary>
-        public List<string> Ingredients => ingredients;
+        public override List<string> Ingredients => ingredients;
 
         /// <summary>
         /// Constructs a new DinoNugget
