@@ -8,10 +8,10 @@ namespace DinoDiner.Menu.Sides
     {
         public override Size Size
         {
-            get => Size;
+            get => size;
             set
             {
-                this.Size = value;
+                size = value;
                 switch(value)
                 {
                     case Size.Large:
@@ -32,7 +32,7 @@ namespace DinoDiner.Menu.Sides
 
         public Triceritots()
         {
-            this.Size = Size.Small;
+            size = Size.Small;
             this.Price = 0.99;
             this.Calories = 352;
             this.Ingredients.AddRange(new List<string> { "Potato", "Salt", "Vegetable Oil" });

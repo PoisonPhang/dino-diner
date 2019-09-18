@@ -14,10 +14,10 @@ namespace DinoDiner.Menu.Sides
         /// </summary>
         public override Size Size
         {
-            get => Size;
+            get => size;
             set
             {
-                this.Size = value;
+                size = value;
                 switch (value)
                 {
                     case Size.Large:
@@ -41,7 +41,7 @@ namespace DinoDiner.Menu.Sides
         /// </summary>
         public Fryceritops()
         {
-            this.Size = Size.Small;
+            size = Size.Small;
             this.Price = 0.99;
             this.Calories = 222;
             this.Ingredients.Add("Potato");
