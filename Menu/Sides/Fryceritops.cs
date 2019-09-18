@@ -17,22 +17,21 @@ namespace DinoDiner.Menu.Sides
             get => Size;
             set
             {
-                if (value == Size.Large)
+                this.Size = value;
+                switch (value)
                 {
-                    this.Size = Size.Large;
-                    this.Price = 1.95;
-                    this.Calories = 480;
-                }
-                else if (value == Size.Medium)
-                {
-                    this.Size = Size.Medium;
-                    this.Price = 1.45;
-                    this.Calories = 365;
-                } else
-                {
-                    this.Size = Size.Small;
-                    this.Price = 0.99;
-                    this.Calories = 222;
+                    case Size.Large:
+                        this.Price = 1.95;
+                        this.Calories = 480;
+                        break;
+                    case Size.Medium:
+                        this.Price = 1.45;
+                        this.Calories = 365;
+                        break;
+                    default:
+                        this.Price = 0.99;
+                        this.Calories = 222;
+                        break;
                 }
             }
         }
