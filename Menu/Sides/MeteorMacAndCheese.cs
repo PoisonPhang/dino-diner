@@ -4,8 +4,14 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// Menu item for the Meteor Mac and Cheese side
+    /// </summary>
     public class MeteorMacAndCheese : Side
     {
+        /// <summary>
+        /// Size property of the MeteorMacAndCheese
+        /// </summary>
         public override Size Size
         {
             get => size;
@@ -30,12 +36,15 @@ namespace DinoDiner.Menu.Sides
             }
         }
 
+        /// <summary>
+        /// Constructs a new MeteorMacAndCheese
+        /// </summary>
         public MeteorMacAndCheese()
         {
             size = Size.Small;
             this.Price = 0.99;
             this.Calories = 420;
-            this.Ingredients.AddRange(new List<string> { "Macaroni Noodles", "Cheese Product", "Pork Sausage" });
+            this.ingredients.AddRange(new List<string> { "Macaroni Noodles", "Cheese Product", "Pork Sausage" });
         }
     }
 }

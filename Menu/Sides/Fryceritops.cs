@@ -44,9 +44,7 @@ namespace DinoDiner.Menu.Sides
             size = Size.Small;
             this.Price = 0.99;
             this.Calories = 222;
-            this.Ingredients.Add("Potato");
-            this.Ingredients.Add("Salt");
-            this.Ingredients.Add("Vegtable Oil");
+            this.ingredients.AddRange(new List<string> { "Potato", "Salt", "Vegetable Oil" });
         }
     }
 }

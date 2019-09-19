@@ -14,6 +14,7 @@ namespace DinoDiner.Menu.Sides
 
     public abstract class Side
     {
+        protected List<string> ingredients = new List<string>();
         protected Size size;
 
         /// <summary>
@@ -29,7 +30,7 @@ namespace DinoDiner.Menu.Sides
         /// <summary>
         /// Gets the ingredients list
         /// </summary>
-        public List<string> Ingredients { get; }
+        public List<string> Ingredients { get => ingredients; }
 
         /// <summary>
         /// Gets or sets the size

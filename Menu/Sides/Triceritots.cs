@@ -4,6 +4,9 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// Menu item for the Triceritots side
+    /// </summary>
     public class Triceritots : Side
     {
         public override Size Size
@@ -20,7 +23,7 @@ namespace DinoDiner.Menu.Sides
                         break;
                     case Size.Medium:
                         this.Price = 1.45;
-                        this.Calories = 610;
+                        this.Calories = 410;
                         break;
                     default:
                         this.Price = 0.99;
@@ -30,12 +33,15 @@ namespace DinoDiner.Menu.Sides
             }
         }
 
+        /// <summary>
+        /// Constructs a new Triceritots
+        /// </summary>
         public Triceritots()
         {
             size = Size.Small;
             this.Price = 0.99;
             this.Calories = 352;
-            this.Ingredients.AddRange(new List<string> { "Potato", "Salt", "Vegetable Oil" });
+            this.ingredients.AddRange(new List<string> { "Potato", "Salt", "Vegetable Oil" });
         }
     }
 }

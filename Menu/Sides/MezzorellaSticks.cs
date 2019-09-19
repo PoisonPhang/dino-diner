@@ -4,8 +4,14 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
+    /// <summary>
+    /// Menu item for the Mezzorella Sticks side
+    /// </summary>
     public class MezzorellaSticks : Side
     {
+        /// <summary>
+        /// Size property of the MezzorellaSticks
+        /// </summary>
         public override Size Size
         {
             get => size;
@@ -30,12 +36,15 @@ namespace DinoDiner.Menu.Sides
             }
         }
 
+        /// <summary>
+        /// Constructs a new MezzorellaSticks
+        /// </summary>
         public MezzorellaSticks()
         {
             size = Size.Small;
             this.Price = 0.99;
             this.Calories = 540;
-            this.Ingredients.AddRange(new List<string> { "Breading", "Cheese Product", "Vegetable Oil" });
+            this.ingredients.AddRange(new List<string> { "Breading", "Cheese Product", "Vegetable Oil" });
         }
     }
 }
