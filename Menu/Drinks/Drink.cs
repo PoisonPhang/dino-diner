@@ -11,6 +11,7 @@ namespace DinoDiner.Menu.Drinks
     public abstract class Drink
     {
         private List<string> ingredients = new List<string>();
+        protected Size size = Size.Small;
 
         /// <summary>
         /// Price of the drink
@@ -30,7 +31,7 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// Size of the drink
         /// </summary>
-        public Size Size { get; set; }
+        public abstract Size Size { get; set; }
 
         /// <summary>
         /// If the drink contains ice
