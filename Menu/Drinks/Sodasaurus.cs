@@ -46,14 +46,13 @@ namespace DinoDiner.Menu.Drinks
         /// Constructs a new instance of Sodasaurus
         /// </summary>
         /// <param name="flavor"></param>
-        public Sodasaurus(SodasaurusFlavor flavor)
+        public Sodasaurus()
         {
             this.Price = 1.50;
             this.Calories = 112;
             this.Ingredients.AddRange(new List<string> { "Water", "Natural Flavors", "Cane Sugar" });
             this.Size = Size.Small;
             this.Ice = true;
-            this.Flavor = flavor;
         }
     }
 }
