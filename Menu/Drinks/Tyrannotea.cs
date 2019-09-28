@@ -12,7 +12,7 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// Tyrannotea Drink object
     /// </summary>
-    class Tyrannotea : Drink
+    public class Tyrannotea : Drink
     {
         private string caneSugar = "Cane Sugar";
 
@@ -31,15 +31,15 @@ namespace DinoDiner.Menu.Drinks
                 {
                     case Size.Large:
                         this.Price = 1.99;
-                        this.Calories = Sweet ? (uint) 32 : 64;
+                        this.Calories = sweet ? (uint) 64 : 32;
                         break;
                     case Size.Medium:
                         this.Price = 1.49;
-                        this.Calories = Sweet ? (uint) 16 : 32;
+                        this.Calories = sweet ? (uint) 32 : 16;
                         break;
                     case Size.Small:
                         this.Price = 0.99;
-                        this.Calories = Sweet ? (uint) 8 : 16;
+                        this.Calories = sweet ? (uint) 16 : 8;
                         break;
                 }
             }
@@ -55,10 +55,11 @@ namespace DinoDiner.Menu.Drinks
             {
                 sweet = value;
                 Size = size;
-                if (value)
+                if (sweet)
                 {
                     Ingredients.Add(caneSugar);
-                } else if (Ingredients.Contains(caneSugar))
+                }
+                else if (Ingredients.Contains(caneSugar))
                 {
                     Ingredients.Remove(caneSugar);
                 }
@@ -79,6 +80,7 @@ namespace DinoDiner.Menu.Drinks
             this.Calories = 8;
             this.Ingredients.AddRange(new List<string>() { "Water", "Tea" });
             this.Size = Size.Small;
+            this.Sweet = false;
         }
 
         /// <summary>
