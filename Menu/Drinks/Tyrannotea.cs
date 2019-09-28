@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Tyrannotea.cs
+ * Author: Connor Davis
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu.Sides;

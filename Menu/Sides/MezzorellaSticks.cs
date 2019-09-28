@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * MezzorellaSticks.cs
+ * Author: Connor Davis
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

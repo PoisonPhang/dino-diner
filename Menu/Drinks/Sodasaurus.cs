@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Sodasaurus.cs
+ * Author: Connor Davis
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu.Sides;
@@ -45,7 +49,6 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// Constructs a new instance of Sodasaurus
         /// </summary>
-        /// <param name="flavor"></param>
         public Sodasaurus()
         {
             this.Price = 1.50;

@@ -1,4 +1,8 @@
-﻿using DinoDiner.Menu.Sides;
+﻿/*
+ * Drink.cs
+ * Author: Connor Davis
+ */
+using DinoDiner.Menu.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * PterodactylWings.cs
+ * Author: Connor Davis
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 

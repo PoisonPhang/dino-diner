@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * CretaceousCombo
+ * Author: Connor Davis
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu.Entrees;
