@@ -11,7 +11,7 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// Water Drink object
     /// </summary>
-    class Water : Drink
+    public class Water : Drink
     {
         /// <summary>
         /// Size of this instance of Water
@@ -43,6 +43,7 @@ namespace DinoDiner.Menu.Drinks
         /// </summary>
         public void AddLemon()
         {
+            Lemon = true;
             Ingredients.Add("Lemon");
         }
     }
