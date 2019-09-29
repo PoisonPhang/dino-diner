@@ -12,7 +12,7 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// JurrasicJava Drink object
     /// </summary>
-    class JurrasicJava : Drink
+    public class JurrasicJava : Drink
     {
         /// <summary>
         /// Size property of this JurrasicJava instance
@@ -44,7 +44,7 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// If this instance of JurrasicJava should leave room for cream
         /// </summary>
-        public bool RoomForCream { get; set; }
+        public bool SpaceForCream { get; set; }
 
         /// <summary>
         /// If this inttance of JurrasicJava should be decaf
@@ -66,9 +66,9 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// Leaves room for cream in this instance of JurrasicJava
         /// </summary>
-        public void LeaveRoomForCream()
+        public void LeaveSpaceForCream()
         {
-            RoomForCream = true;
+            SpaceForCream = true;
         }
 
         /// <summary>
