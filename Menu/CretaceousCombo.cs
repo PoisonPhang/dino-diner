@@ -8,7 +8,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    class CretaceousCombo
+    class CretaceousCombo : IMenuItem
     {
         private Size size =  Size.Small;
         private Side side;

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    public abstract class Side
+    public abstract class Side : IMenuItem
     {
         protected List<string> ingredients = new List<string>();
         protected Size size;

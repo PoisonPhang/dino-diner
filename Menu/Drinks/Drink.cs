@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Abstract drink class for creating drink objects types
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IMenuItem
     {
         private List<string> ingredients = new List<string>();
         protected Size size = Size.Small;
