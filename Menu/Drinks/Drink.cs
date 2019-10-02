@@ -2,12 +2,11 @@
  * Drink.cs
  * Author: Connor Davis
  */
-using DinoDiner.Menu.Sides;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Abstract drink class for creating drink objects types
