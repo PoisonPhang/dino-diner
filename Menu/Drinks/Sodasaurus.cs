@@ -56,5 +56,10 @@ namespace DinoDiner.Menu
             this.Size = Size.Small;
             this.Ice = true;
         }
+
+        public override string ToString()
+        {
+            return "Sodasaurus";
+        }
     }
 }

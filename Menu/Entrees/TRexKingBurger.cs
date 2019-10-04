@@ -117,5 +117,10 @@ namespace DinoDiner.Menu
         {
             mayo = false;
         }
+
+        public override string ToString()
+        {
+            return "TRexKingBurger";
+        }
     }
 }

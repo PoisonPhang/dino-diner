@@ -50,5 +50,10 @@ namespace DinoDiner.Menu
             this.Calories = 540;
             this.ingredients.AddRange(new List<string> { "Breading", "Cheese Product", "Vegetable Oil" });
         }
+
+        public override string ToString()
+        {
+            return "MezzorellaSticks";
+        }
     }
 }

@@ -46,5 +46,10 @@ namespace DinoDiner.Menu
             Lemon = true;
             Ingredients.Add("Lemon");
         }
+
+        public override string ToString()
+        {
+            return "Water";
+        }
     }
 }

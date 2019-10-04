@@ -77,5 +77,10 @@ namespace DinoDiner.Menu
         {
             Ice = true;
         }
+
+        public override string ToString()
+        {
+            return "JurrasicJava";
+        }
     }
 }

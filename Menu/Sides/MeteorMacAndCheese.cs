@@ -50,5 +50,10 @@ namespace DinoDiner.Menu
             this.Calories = 420;
             this.ingredients.AddRange(new List<string> { "Macaroni Noodles", "Cheese Product", "Pork Sausage" });
         }
+
+        public override string ToString()
+        {
+            return "MeteorMacAndCheese";
+        }
     }
 }
