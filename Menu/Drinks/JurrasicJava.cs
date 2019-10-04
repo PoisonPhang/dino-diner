@@ -57,7 +57,7 @@ namespace DinoDiner.Menu
         {
             this.Price = 0.59;
             this.Calories = 2;
-            this.Ingredients.AddRange(new List<string>() { "Water", "Coffee" });
+            this.ingredients.AddRange(new List<string>() { "Water", "Coffee" });
             this.size = Size.Small;
             this.Ice = false;
         }

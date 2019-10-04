@@ -56,11 +56,11 @@ namespace DinoDiner.Menu
                 Size = size;
                 if (sweet)
                 {
-                    Ingredients.Add(caneSugar);
+                    ingredients.Add(caneSugar);
                 }
                 else if (Ingredients.Contains(caneSugar))
                 {
-                    Ingredients.Remove(caneSugar);
+                    ingredients.Remove(caneSugar);
                 }
             }
         }
@@ -77,7 +77,7 @@ namespace DinoDiner.Menu
         {
             this.Price = 0.99;
             this.Calories = 8;
-            this.Ingredients.AddRange(new List<string>() { "Water", "Tea" });
+            this.ingredients.AddRange(new List<string>() { "Water", "Tea" });
             this.Size = Size.Small;
             this.Sweet = false;
         }
@@ -88,7 +88,7 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
-            Ingredients.Add("Lemon");
+            ingredients.Add("Lemon");
         }
 
         public override string ToString()

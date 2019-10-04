@@ -34,7 +34,7 @@ namespace DinoDiner.Menu
         {
             Price = 0.10;
             Calories = 0;
-            Ingredients.Add("Water");
+            ingredients.Add("Water");
             Size = Size.Small;
         }
 
@@ -44,7 +44,7 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
-            Ingredients.Add("Lemon");
+            ingredients.Add("Lemon");
         }
 
         public override string ToString()

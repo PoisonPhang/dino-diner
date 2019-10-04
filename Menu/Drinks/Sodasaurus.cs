@@ -52,7 +52,7 @@ namespace DinoDiner.Menu
         {
             this.Price = 1.50;
             this.Calories = 112;
-            this.Ingredients.AddRange(new List<string> { "Water", "Natural Flavors", "Cane Sugar" });
+            this.ingredients.AddRange(new List<string> { "Water", "Natural Flavors", "Cane Sugar" });
             this.Size = Size.Small;
             this.Ice = true;
         }

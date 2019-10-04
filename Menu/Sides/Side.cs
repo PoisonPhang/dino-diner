@@ -26,7 +26,18 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Gets the ingredients list
         /// </summary>
-        public List<string> Ingredients { get => ingredients; }
+        public List<string> Ingredients
+        {
+            get
+            {
+                List<string> i = new List<string>();
+                foreach(string s in ingredients)
+                {
+                    i.Add(s);
+                }
+                return i;
+            }
+        }
 
         /// <summary>
         /// Gets or sets the size

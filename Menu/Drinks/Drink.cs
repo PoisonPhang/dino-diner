@@ -13,7 +13,7 @@ namespace DinoDiner.Menu
     /// </summary>
     public abstract class Drink : IMenuItem
     {
-        private List<string> ingredients = new List<string>();
+        protected List<string> ingredients = new List<string>();
         protected Size size = Size.Small;
 
         /// <summary>
@@ -29,7 +29,18 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Ingredients for the drinks
         /// </summary>
-        public List<string> Ingredients { get => ingredients; }
+        public List<string> Ingredients
+        {
+            get
+            {
+                List<string> i = new List<string>();
+                foreach (string s in ingredients)
+                {
+                    i.Add(s);
+                }
+                return i;
+            }
+        }
 
         /// <summary>
         /// Size of the drink

@@ -21,7 +21,18 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Ingredients of the Dino Nuggets
         /// </summary>
-        public override List<string> Ingredients => ingredients;
+        public override List<string> Ingredients
+        {
+            get
+            {
+                List<string> i = new List<string>();
+                foreach(string s in ingredients)
+                {
+                    i.Add(s);
+                }
+                return i;
+            }
+        }
 
         /// <summary>
         /// Constructs a new DinoNugget
