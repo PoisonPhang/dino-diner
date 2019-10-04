@@ -49,7 +49,7 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return "DinoNuggets";
+            return "Dino-Nuggets";
         }
     }
 }

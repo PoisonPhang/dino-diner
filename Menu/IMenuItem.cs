@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    interface IMenuItem
+    public interface IMenuItem
     {
         /// <summary>
         /// Price of the menu item

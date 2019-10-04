@@ -69,7 +69,7 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return "VelociWrap";
+            return "Veloci-Wrap";
         }
     }
 }

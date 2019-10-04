@@ -53,7 +53,7 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return "MezzorellaSticks";
+            return $"{size} Mezzorella Sticks";
         }
     }
 }

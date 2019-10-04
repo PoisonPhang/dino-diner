@@ -59,7 +59,7 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return "Sodasaurus";
+            return $"{size} {Flavor} Sodasaurus";
         }
     }
 }

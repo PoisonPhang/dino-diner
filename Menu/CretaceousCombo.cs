@@ -8,7 +8,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    class CretaceousCombo : IMenuItem
+    public class CretaceousCombo : IMenuItem
     {
         private Size size =  Size.Small;
         private Side side;
@@ -71,8 +71,13 @@ namespace DinoDiner.Menu
         public CretaceousCombo(Entree entree)
         {
             Entree = entree;
-            Drink = new JurrasicJava();
+            Drink = new JurassicJava();
             Side = new Fryceritops();
+        }
+
+        public override string ToString()
+        {
+            return $"{Entree.ToString()} Combo";
         }
     }
 }

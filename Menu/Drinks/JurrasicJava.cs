@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// JurrasicJava Drink object
     /// </summary>
-    public class JurrasicJava : Drink
+    public class JurassicJava : Drink
     {
         /// <summary>
         /// Size property of this JurrasicJava instance
@@ -53,7 +53,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Creates a new instance of JurrasicJava
         /// </summary>
-        public JurrasicJava()
+        public JurassicJava()
         {
             this.Price = 0.59;
             this.Calories = 2;
@@ -80,7 +80,8 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return "JurrasicJava";
+            if (Decaf) return $"{size} Decaf Jurassic Java";
+            return $"{size} Jurassic Java";
         }
     }
 }
