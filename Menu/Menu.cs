@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Menu.cs
+ * Author: Connor Davis
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -116,6 +120,18 @@ namespace DinoDiner.Menu
                     new CretaceousCombo(new VelociWrap())
                 };
             }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach(IMenuItem menuItem in AvailableMenuItems)
+            {
+                sb.Append(menuItem.ToString());
+            }
+
+            return sb.ToString();
         }
     }
 }
