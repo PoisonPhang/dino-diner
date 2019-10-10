@@ -34,8 +34,8 @@
                     </Style>
                 </WrapPanel.Resources>
 
-                <Button>Select Drink</Button>
-                <Button>Select Side</Button>
+                <Button Click="SelectDrink">Select Drink</Button>
+                <Button Click="SelectSide">Select Side</Button>
             </WrapPanel>
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">

@@ -20,9 +20,66 @@ namespace PointOfSale
     /// </summary>
     public partial class DrinkSelection : Page
     {
+        private List<Button> drinks;
+        private List<Button> options;
         public DrinkSelection()
         {
             InitializeComponent();
+            drinks = new List<Button>() { BSodasaurus, BTryrannotea, BJurassicJava, BWater };
+            options = new List<Button>() { BLemon, BFlavor, BDecaf, BSweet };
+        }
+
+        private void SelectSodasaurus(object sender, RoutedEventArgs e)
+        {
+            foreach (Button button in drinks)
+                button.Background = Brushes.Gray;
+
+            BSodasaurus.Background = Brushes.Green;
+
+            foreach (Button button in options)
+                button.IsEnabled = false;
+
+            BFlavor.IsEnabled = true;
+        }
+
+        private void SelectTryrannotea(object sender, RoutedEventArgs e)
+        {
+            foreach (Button button in drinks)
+                button.Background = Brushes.Gray;
+
+            BTryrannotea.Background = Brushes.Green;
+
+            foreach (Button button in options)
+                button.IsEnabled = false;
+
+            BLemon.IsEnabled = true;
+            BSweet.IsEnabled = true;
+        }
+
+        private void SelectJurassicJava(object sender, RoutedEventArgs e)
+        {
+            foreach (Button button in drinks)
+                button.Background = Brushes.Gray;
+
+            BJurassicJava.Background = Brushes.Green;
+
+            foreach (Button button in options)
+                button.IsEnabled = false;
+
+            BDecaf.IsEnabled = true;
+        }
+
+        private void SelectWater(object sender, RoutedEventArgs e)
+        {
+            foreach (Button button in drinks)
+                button.Background = Brushes.Gray;
+
+            BWater.Background = Brushes.Green;
+
+            foreach (Button button in options)
+                button.IsEnabled = false;
+
+            BLemon.IsEnabled = true;
         }
     }
 }
