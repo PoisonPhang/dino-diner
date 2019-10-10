@@ -37,12 +37,12 @@ namespace PointOfSale
 
         private void SelectDrink(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SideSelection());
+            NavigationService.Navigate(new DrinkSelection());
         }
 
         private void SelectSide(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.Navigate(new SideSelection());
         }
     }
 }

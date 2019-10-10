@@ -25,8 +25,8 @@
         <WrapPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Margin="50" Width="100" Height="75" Click="SelectCombo">Combos</Button>
             <Button Margin="50" Width="100" Height="75" Click="SelectEntree">Entrees</Button>
-            <Button Margin="50" Width="100" Height="75">Sides</Button>
-            <Button Margin="50" Width="100" Height="75">Drinks</Button>
+            <Button Margin="50" Width="100" Height="75" Click="SelectSide">Sides</Button>
+            <Button Margin="50" Width="100" Height="75" Click="SelectDrink">Drinks</Button>
         </WrapPanel>
     </Grid>
 </Page>
