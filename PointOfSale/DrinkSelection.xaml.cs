@@ -81,5 +81,10 @@ namespace PointOfSale
 
             BLemon.IsEnabled = true;
         }
+
+        private void SelectFlavor(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new FlavorSelection());
+        }
     }
 }

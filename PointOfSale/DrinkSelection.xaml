@@ -58,7 +58,7 @@
             </WrapPanel.Resources>
 
             <Button Name="BLemon" IsEnabled="False">Lemon</Button>
-            <Button Name="BFlavor" IsEnabled="False">Flavor</Button>
+            <Button Name="BFlavor" IsEnabled="False" Click="SelectFlavor">Flavor</Button>
             <Button Name="BDecaf" IsEnabled="False">Decaf</Button>
             <Button Name="BSweet" IsEnabled="False">Sweet</Button>
         </WrapPanel>
