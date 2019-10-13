@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/dino-skin.jpeg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="2*"/>
@@ -14,17 +17,6 @@
 
         <TextBlock Grid.Column="1" TextAlignment="Center" Background="LightSteelBlue">// TODO: Order</TextBlock>
 
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="9*"/>
-            </Grid.RowDefinitions>
-
-            <Label Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold">
-                Add to Order
-            </Label>
-
-            <Frame Grid.Row="1" Source="MenuCategorySelection.xaml"></Frame>
-        </Grid>
+        <Frame Source="MenuCategorySelection.xaml"></Frame>
     </Grid>
 </Window>

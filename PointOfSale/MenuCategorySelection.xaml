@@ -9,7 +9,8 @@
       Title="MenuCategorySelection">
 
     <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
-        <WrapPanel.Resources>
+        
+            <WrapPanel.Resources>
             <Style TargetType="Button">
                 <Setter Property="MinWidth" Value="100"/>
                 <Setter Property="MinHeight" Value="75"/>
