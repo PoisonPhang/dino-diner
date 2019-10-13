@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* DrinkSelection.xaml.cs
+ * Author: Connor Davis
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +32,11 @@ namespace PointOfSale
             options = new List<Button>() { BLemon, BFlavor, BDecaf, BSweet };
         }
 
+        /// <summary>
+        /// Toggles color values of drink buttons and enables options
+        /// </summary>
+        /// <param name="sender">Element</param>
+        /// <param name="e">Event args</param>
         private void SelectSodasaurus(object sender, RoutedEventArgs e)
         {
             foreach (Button button in drinks)
@@ -42,6 +50,11 @@ namespace PointOfSale
             BFlavor.IsEnabled = true;
         }
 
+        /// <summary>
+        /// Toggles color values of drink buttons and enables options
+        /// </summary>
+        /// <param name="sender">Element</param>
+        /// <param name="e">Event args</param>
         private void SelectTryrannotea(object sender, RoutedEventArgs e)
         {
             foreach (Button button in drinks)
@@ -56,6 +69,11 @@ namespace PointOfSale
             BSweet.IsEnabled = true;
         }
 
+        /// <summary>
+        /// Toggles color values of drink buttons and enables options
+        /// </summary>
+        /// <param name="sender">Element</param>
+        /// <param name="e">Event args</param>
         private void SelectJurassicJava(object sender, RoutedEventArgs e)
         {
             foreach (Button button in drinks)
@@ -69,6 +87,11 @@ namespace PointOfSale
             BDecaf.IsEnabled = true;
         }
 
+        /// <summary>
+        /// Toggles color values of drink buttons and enables options
+        /// </summary>
+        /// <param name="sender">Element</param>
+        /// <param name="e">Event args</param>
         private void SelectWater(object sender, RoutedEventArgs e)
         {
             foreach (Button button in drinks)
@@ -82,6 +105,11 @@ namespace PointOfSale
             BLemon.IsEnabled = true;
         }
 
+        /// <summary>
+        /// Progresses the display to FlavorSelection
+        /// </summary>
+        /// <param name="sender">Element</param>
+        /// <param name="e">Event args</param>
         private void SelectFlavor(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new FlavorSelection());
