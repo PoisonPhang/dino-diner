@@ -34,7 +34,7 @@ namespace PointOfSale
             foreach (Button button in drinks)
                 button.Background = Brushes.Gray;
 
-            BSodasaurus.Background = Brushes.Green;
+            BSodasaurus.ClearValue(Button.BackgroundProperty);
 
             foreach (Button button in options)
                 button.IsEnabled = false;
@@ -47,7 +47,7 @@ namespace PointOfSale
             foreach (Button button in drinks)
                 button.Background = Brushes.Gray;
 
-            BTryrannotea.Background = Brushes.Green;
+            BTryrannotea.ClearValue(Button.BackgroundProperty);
 
             foreach (Button button in options)
                 button.IsEnabled = false;
@@ -61,7 +61,7 @@ namespace PointOfSale
             foreach (Button button in drinks)
                 button.Background = Brushes.Gray;
 
-            BJurassicJava.Background = Brushes.Green;
+            BJurassicJava.ClearValue(Button.BackgroundProperty);
 
             foreach (Button button in options)
                 button.IsEnabled = false;
@@ -74,7 +74,7 @@ namespace PointOfSale
             foreach (Button button in drinks)
                 button.Background = Brushes.Gray;
 
-            BWater.Background = Brushes.Green;
+            BWater.ClearValue(Button.BackgroundProperty);
 
             foreach (Button button in options)
                 button.IsEnabled = false;

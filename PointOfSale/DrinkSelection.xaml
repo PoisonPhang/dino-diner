@@ -23,19 +23,39 @@
             <WrapPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <WrapPanel.Resources>
                     <Style TargetType="Button">
-                        <Setter Property="Width" Value="150"/>
-                        <Setter Property="Height" Value="50"/>
+                        <Setter Property="MinWidth" Value="150"/>
+                        <Setter Property="MinHeight" Value="50"/>
                         <Setter Property="Margin" Value="10"/>
                     </Style>
                 </WrapPanel.Resources>
 
-                <Button Name="BSodasaurus" Click="SelectSodasaurus">Sodasaurus</Button>
-                <Button Name="BTryrannotea" Click="SelectTryrannotea">Tryrannotea</Button>
-                <Button Name="BJurassicJava" Click="SelectJurassicJava">Jurassic Java</Button>
-                <Button Name="BWater" Click="SelectWater">Water</Button>
+                <Button Name="BSodasaurus" Click="SelectSodasaurus">
+                    <StackPanel>
+                        <Image Width="50" Source="Assets/DinoDiner-14.png"/>
+                        <TextBlock>Sodasaurus</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Name="BTryrannotea" Click="SelectTryrannotea">
+                    <StackPanel>
+                        <Image Width="50" Source="Assets/DinoDiner-12.png"/>
+                        <TextBlock>Tryrannotea</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Name="BJurassicJava" Click="SelectJurassicJava">
+                    <StackPanel>
+                        <Image Width="50" Source="Assets/DinoDiner-13.png"/>
+                        <TextBlock>Jurassic Java</TextBlock>
+                    </StackPanel>
+                </Button>
+                <Button Name="BWater" Click="SelectWater">
+                    <StackPanel>
+                        <Image Width="50" Source="Assets/DinoDiner-15.png"/>
+                        <TextBlock>Water</TextBlock>
+                    </StackPanel>
+                </Button>
             </WrapPanel>
 
-            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray">
                 <StackPanel.Resources>
                     <Style TargetType="RadioButton">
                         <Setter Property="Margin" Value="5"/>

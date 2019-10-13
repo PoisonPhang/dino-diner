@@ -8,12 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MenuCategorySelection">
 
-    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
         
             <WrapPanel.Resources>
             <Style TargetType="Button">
-                <Setter Property="MinWidth" Value="100"/>
-                <Setter Property="MinHeight" Value="75"/>
+                <Setter Property="MinWidth" Value="150"/>
+                <Setter Property="MinHeight" Value="50"/>
                 <Setter Property="Margin" Value="50"/>
             </Style>
         </WrapPanel.Resources>
