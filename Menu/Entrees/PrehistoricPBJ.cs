@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿/* PrehistoricPBJ.cs
+ * Author: Nathan Bean
+ * Modified by: Connor Davis
+ */
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu
 {
@@ -15,6 +19,28 @@ namespace DinoDiner.Menu
                 if (peanutButter) ingredients.Add("Peanut Butter");
                 if (jelly) ingredients.Add("Jelly");
                 return ingredients;
+            }
+        }
+
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[2];
+                int index = 0;
+
+                if (!peanutButter)
+                {
+                    special[index] = "Hold peanut butter";
+                    index++;
+                }
+                if (!jelly)
+                {
+                    special[index] = "Hold jelly";
+                    index++;
+                }
+
+                return special;
             }
         }
 

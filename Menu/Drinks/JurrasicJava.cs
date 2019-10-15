@@ -50,6 +50,33 @@ namespace DinoDiner.Menu
         /// </summary>
         public bool Decaf { get; set; }
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[3];
+                int index = 0;
+
+                if (SpaceForCream)
+                {
+                    special[index] = "Leave space for cream";
+                    index++;
+                }
+                if (Ice)
+                {
+                    special[index] = "Add Ice";
+                    index++;
+                }
+                if (Decaf)
+                {
+                    special[index] = "Make Decaf";
+                    index++;
+                }
+
+                return special;
+            }
+        }
+
         /// <summary>
         /// Creates a new instance of JurrasicJava
         /// </summary>

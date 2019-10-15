@@ -45,6 +45,58 @@ namespace DinoDiner.Menu
             }
         }
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[8];
+                int index = 0;
+
+                if (!bun)
+                {
+                    special[index] = "Hold bun";
+                    index++;
+                }
+                if (!lettuce)
+                {
+                    special[index] = "Hold lettuce";
+                    index++;
+                }
+                if (!tomato)
+                {
+                    special[index] = "Hold tomato";
+                    index++;
+                }
+                if (!onion)
+                {
+                    special[index] = "Hold onion";
+                    index++;
+                }
+                if (!pickle)
+                {
+                    special[index] = "Hold pickle";
+                    index++;
+                }
+                if (!ketchup)
+                {
+                    special[index] = "Hold ketchup";
+                    index++;
+                }
+                if (!mustard)
+                {
+                    special[index] = "Hold mustard";
+                    index++;
+                }
+                if (!mayo)
+                {
+                    special[index] = "Hold mayo";
+                    index++;
+                }
+
+                return special;
+            }
+        }
+
         /// <summary>
         /// Constructs a new TRexKingBurger
         /// </summary>

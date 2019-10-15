@@ -34,6 +34,15 @@ namespace DinoDiner.Menu
             }
         }
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[0];
+                return special;
+            }
+        }
+
         /// <summary>
         /// Constructs a new DinoNugget
         /// </summary>

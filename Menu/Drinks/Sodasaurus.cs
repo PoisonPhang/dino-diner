@@ -45,6 +45,21 @@ namespace DinoDiner.Menu
         /// </summary>
         public SodasaurusFlavor Flavor { get; set; }
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[1];
+
+                if (!Ice)
+                {
+                    special[0] = "Hold Ice";
+                }
+
+                return special;
+            }
+        }
+
         /// <summary>
         /// Constructs a new instance of Sodasaurus
         /// </summary>

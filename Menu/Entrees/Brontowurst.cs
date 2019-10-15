@@ -32,6 +32,33 @@ namespace DinoDiner.Menu
             }
         }
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[3];
+                int index = 0;
+
+                if (!bun)
+                {
+                    special[index] = "Hold bun";
+                    index++;
+                }
+                if (!peppers)
+                {
+                    special[index] = "Hold peppers";
+                    index++;
+                }
+                if (!onion)
+                {
+                    special[index] = "Hold onion";
+                    index++;
+                }
+
+                return special;
+            }
+        }
+
         /// <summary>
         /// Constructs a new Brontowurst
         /// </summary>

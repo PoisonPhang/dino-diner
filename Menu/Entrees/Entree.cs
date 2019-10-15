@@ -8,7 +8,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    public abstract class Entree : IMenuItem
+    public abstract class Entree : IMenuItem, IOrderItem
     {
         /// <summary>
         /// Gets and sets the price
@@ -24,5 +24,9 @@ namespace DinoDiner.Menu
         /// Gets the ingredients list
         /// </summary>
         public abstract List<string> Ingredients { get; }
+
+        public string Description => ToString();
+
+        public abstract string[] Sepcial { get; }
     }
 }

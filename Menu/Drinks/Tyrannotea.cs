@@ -70,6 +70,33 @@ namespace DinoDiner.Menu
         /// </summary>
         public bool Lemon { get; set; }
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[3];
+                int index = 0;
+
+                if (!Ice)
+                {
+                    special[0] = "Hold ice";
+                    index++;
+                }
+                if (Sweet)
+                {
+                    special[1] = "Make sweet";
+                    index++;
+                }
+                if (Lemon)
+                {
+                    special[2] = "Add lemon";
+                    index++;
+                }
+
+                return special;
+            }
+        }
+
         /// <summary>
         /// Creates a new instance of Tyrannotea
         /// </summary>

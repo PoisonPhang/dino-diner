@@ -34,6 +34,33 @@ namespace DinoDiner.Menu
             }
         }
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[3];
+                int index = 0;
+
+                if (!dressing)
+                {
+                    special[index] = "Hold dressing";
+                    index++;
+                }
+                if (!lettuce)
+                {
+                    special[index] = "Hold lettuce";
+                    index++;
+                }
+                if (!cheese)
+                {
+                    special[index] = "Hold cheese";
+                    index++;
+                }
+
+                return special;
+            }
+        }
+
         /// <summary>
         /// Constructs a new VelociWrap instance
         /// </summary>

@@ -27,6 +27,28 @@ namespace DinoDiner.Menu
         /// </summary>
         public bool Lemon { get; set; } = false;
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[2];
+                int index = 0;
+
+                if (!Ice)
+                {
+                    special[index] = "Hold ice";
+                    index++;
+                }
+                if (Lemon)
+                {
+                    special[index] = "Add lemon";
+                    index++;
+                }
+
+                return special;
+            }
+        }
+
         /// <summary>
         /// Creates a new instance of Water
         /// </summary>

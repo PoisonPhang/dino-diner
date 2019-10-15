@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Abstract drink class for creating drink objects types
     /// </summary>
-    public abstract class Drink : IMenuItem
+    public abstract class Drink : IMenuItem, IOrderItem
     {
         protected List<string> ingredients = new List<string>();
         protected Size size = Size.Small;
@@ -51,6 +51,10 @@ namespace DinoDiner.Menu
         /// If the drink contains ice
         /// </summary>
         public bool Ice { get; set; } = true;
+
+        public string Description => ToString();
+
+        public abstract string[] Sepcial { get; }
 
         /// <summary>
         /// Removes ice from the drink

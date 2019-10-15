@@ -35,6 +35,38 @@ namespace DinoDiner.Menu
             }
         }
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                string[] special = new string[4];
+                int index = 0;
+
+                if (!bun)
+                {
+                    special[index] = "Hold bun";
+                    index++;
+                }
+                if (!pickle)
+                {
+                    special[index] = "Hold pickle";
+                    index++;
+                }
+                if (!ketchup)
+                {
+                    special[index] = "Hold ketchup";
+                    index++;
+                }
+                if (!mustard)
+                {
+                    special[index] = "Hold mustard";
+                    index++;
+                }
+
+                return special;
+            }
+        }
+
         /// <summary>
         /// Constructs a new instance of the Steakosaurus Burger
         /// </summary>
