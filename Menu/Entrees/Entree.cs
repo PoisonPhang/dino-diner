@@ -27,6 +27,6 @@ namespace DinoDiner.Menu
 
         public string Description => ToString();
 
-        public abstract string[] Sepcial { get; }
+        public abstract string[] Special { get; }
     }
 }

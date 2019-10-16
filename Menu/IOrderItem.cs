@@ -25,6 +25,6 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Special insctructions of the order item
         /// </summary>
-        string[] Sepcial { get; }
+        string[] Special { get; }
     }
 }

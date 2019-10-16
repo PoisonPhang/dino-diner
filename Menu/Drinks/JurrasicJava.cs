@@ -50,7 +50,7 @@ namespace DinoDiner.Menu
         /// </summary>
         public bool Decaf { get; set; }
 
-        public override string[] Sepcial
+        public override string[] Special
         {
             get
             {

@@ -27,7 +27,7 @@ namespace DinoDiner.Menu
         /// </summary>
         public bool Lemon { get; set; } = false;
 
-        public override string[] Sepcial
+        public override string[] Special
         {
             get
             {

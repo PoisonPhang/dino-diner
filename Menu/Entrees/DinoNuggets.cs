@@ -34,7 +34,7 @@ namespace DinoDiner.Menu
             }
         }
 
-        public override string[] Sepcial
+        public override string[] Special
         {
             get
             {
