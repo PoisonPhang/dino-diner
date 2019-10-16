@@ -3,13 +3,24 @@
  * Modified by: Connor Davis
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class PrehistoricPBJ : Entree
+    public class PrehistoricPBJ : Entree, INotifyPropertyChanged
     {
         private bool peanutButter = true;
         private bool jelly = true;
+
+        /// <summary>
+        /// An event handler for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyOfPropertyChanged(string property)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
 
         public override List<string> Ingredients
         {
@@ -26,21 +37,12 @@ namespace DinoDiner.Menu
         {
             get
             {
-                string[] special = new string[2];
-                int index = 0;
+                List<string> special = new List<string>();
 
-                if (!peanutButter)
-                {
-                    special[index] = "Hold peanut butter";
-                    index++;
-                }
-                if (!jelly)
-                {
-                    special[index] = "Hold jelly";
-                    index++;
-                }
+                if (!peanutButter) special.Add("Hold Peanut Butter");
+                if (!jelly) special.Add("Hold Jelly");
 
-                return special;
+                return special.ToArray();
             }
         }
 
@@ -53,6 +55,8 @@ namespace DinoDiner.Menu
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
         public void HoldJelly()

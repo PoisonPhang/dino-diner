@@ -195,7 +195,7 @@ namespace MenuTest.Drinks
             JurassicJava jurassicJava = new JurassicJava();
             jurassicJava.AddIce();
 
-            Assert.Contains("Make Decaf", jurassicJava.Special);
+            Assert.Contains("Add Ice", jurassicJava.Special);
         }
 
         [Fact]
