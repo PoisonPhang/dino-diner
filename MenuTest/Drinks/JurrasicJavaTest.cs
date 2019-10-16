@@ -164,5 +164,15 @@ namespace MenuTest.Drinks
             jurassicJava.Decaf = true;
             Assert.Equal($"{size} Decaf Jurassic Java", jurassicJava.Description);
         }
+
+        // Special item test
+
+        [Fact]
+        public void ShouldReturnAllSpecialsWhenNeeded()
+        {
+            JurassicJava jurrasicJava = new JurassicJava();
+            jurrasicJava.LeaveSpaceForCream();
+            jurrasicJava.AddIce();
+        }
     }
 }
