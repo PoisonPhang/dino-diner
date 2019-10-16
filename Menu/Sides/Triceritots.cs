@@ -37,6 +37,14 @@ namespace DinoDiner.Menu
             }
         }
 
+        public override string[] Sepcial
+        {
+            get
+            {
+                return new string[0];
+            }
+        }
+
         /// <summary>
         /// Constructs a new Triceritots
         /// </summary>

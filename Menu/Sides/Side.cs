@@ -8,7 +8,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    public abstract class Side : IMenuItem
+    public abstract class Side : IMenuItem, IOrderItem
     {
         protected List<string> ingredients = new List<string>();
         protected Size size;
@@ -44,5 +44,8 @@ namespace DinoDiner.Menu
         /// </summary>
         public abstract Size Size { get; set; }
 
+        public string Description => ToString();
+
+        public abstract string[] Sepcial { get; }
     }
 }
