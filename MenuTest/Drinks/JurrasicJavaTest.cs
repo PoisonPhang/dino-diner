@@ -129,5 +129,40 @@ namespace MenuTest.Drinks
             Assert.Contains("Coffee", jurrasicJava.Ingredients);
             Assert.Equal(2, jurrasicJava.Ingredients.Count);
         }
+
+        // description test
+
+        [Fact]
+        public void ShouldReturnCorrectDescriptionForSmall()
+        {
+            JurassicJava jurassicJava = new JurassicJava();
+            Size size = Size.Small;
+            jurassicJava.Size = size;
+            Assert.Equal($"{size} Jurassic Java", jurassicJava.Description);
+            jurassicJava.Decaf = true;
+            Assert.Equal($"{size} Decaf Jurassic Java", jurassicJava.Description);
+        }
+
+        [Fact]
+        public void ShouldReturnCorrectDescriptionForMedium()
+        {
+            JurassicJava jurassicJava = new JurassicJava();
+            Size size = Size.Medium;
+            jurassicJava.Size = size;
+            Assert.Equal($"{size} Jurassic Java", jurassicJava.Description);
+            jurassicJava.Decaf = true;
+            Assert.Equal($"{size} Decaf Jurassic Java", jurassicJava.Description);
+        }
+
+        [Fact]
+        public void ShouldReturnCorrectDescriptionForLarge()
+        {
+            JurassicJava jurassicJava = new JurassicJava();
+            Size size = Size.Large;
+            jurassicJava.Size = size;
+            Assert.Equal($"{size} Jurassic Java", jurassicJava.Description);
+            jurassicJava.Decaf = true;
+            Assert.Equal($"{size} Decaf Jurassic Java", jurassicJava.Description);
+        }
     }
 }
