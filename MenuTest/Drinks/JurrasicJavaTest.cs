@@ -175,9 +175,9 @@ namespace MenuTest.Drinks
             jurrasicJava.AddIce();
             jurrasicJava.Decaf = true;
 
-            Assert.Contains("Leave space for cream", jurrasicJava.Description);
-            Assert.Contains("Add Ice", jurrasicJava.Description);
-            Assert.Contains("Make Decaf", jurrasicJava.Description);
+            Assert.Contains("Leave space for cream", jurrasicJava.Special);
+            Assert.Contains("Add Ice", jurrasicJava.Special);
+            Assert.Contains("Make Decaf", jurrasicJava.Special);
         }
 
         [Fact]
@@ -186,7 +186,7 @@ namespace MenuTest.Drinks
             JurassicJava jurassicJava = new JurassicJava();
             jurassicJava.LeaveSpaceForCream();
 
-            Assert.Contains("Leave space for cream", jurassicJava.Description);
+            Assert.Contains("Leave space for cream", jurassicJava.Special);
         }
 
         [Fact]

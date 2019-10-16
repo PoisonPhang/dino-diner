@@ -219,5 +219,68 @@ namespace MenuTest.Drinks
             Assert.Contains("Cane Sugar", tyrannotea.Ingredients);
             Assert.Equal(3, tyrannotea.Ingredients.Count);
         }
+
+        // Correct Description
+
+        [Theory]
+        [InlineData(Size.Small, false)]
+        [InlineData(Size.Medium, false)]
+        [InlineData(Size.Large, false)]
+        [InlineData(Size.Small, true)]
+        [InlineData(Size.Medium, true)]
+        [InlineData(Size.Large, true)]
+        public void ShouldReturnCorrectDescritpionForAllSizesAndSweetAndUnsweet(Size size, bool isSweet)
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+            tyrannotea.Size = size;
+            tyrannotea.Sweet = isSweet;
+            if (isSweet) Assert.Equal($"{size} Sweet Tyrannotea", tyrannotea.Description);
+            else Assert.Equal($"{size} Tyrannotea", tyrannotea.Description);
+        }
+
+        // Correct special values
+
+        [Fact]
+        public void ShouldReturnAllSpecialValuesWhenNeeded()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+            tyrannotea.HoldIce();
+            tyrannotea.Sweet = true;
+            tyrannotea.AddLemon();
+
+            Assert.Contains("Hold ice", tyrannotea.Special);
+            Assert.Contains("Make sweet", tyrannotea.Special);
+            Assert.Contains("Add lemon", tyrannotea.Special);
+        }
+
+        [Fact]
+        public void ShouldReturnHoldIce()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+            tyrannotea.HoldIce();
+
+            Assert.Contains("Hold ice", tyrannotea.Special);
+            Assert.Single(tyrannotea.Special);
+        }
+
+        [Fact]
+        public void ShouldReturnMakeSweet()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+            tyrannotea.Sweet = true;
+
+            Assert.Contains("Make sweet", tyrannotea.Special);
+            Assert.Single(tyrannotea.Special);
+        }
+
+        [Fact]
+        public void ShouldReturnAddLemon()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+            tyrannotea.AddLemon();
+
+            Assert.Contains("Add lemon", tyrannotea.Special);
+            Assert.Single(tyrannotea.Special);
+        }
     }
 }

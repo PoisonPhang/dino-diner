@@ -53,7 +53,7 @@ namespace DinoDiner.Menu
 
                 if (!Ice)
                 {
-                    special[0] = "Hold Ice";
+                    special[0] = "Hold ice";
                 }
 
                 return special;

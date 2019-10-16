@@ -117,5 +117,51 @@ namespace MenuTest.Drinks
             Assert.Contains("Lemon", water.Ingredients);
             Assert.Equal(2, water.Ingredients.Count);
         }
+
+        // Correct Description
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ShouldReturnCorrectDescription(Size size)
+        {
+            Water water = new Water();
+            water.Size = size;
+            Assert.Equal($"{size} Water", water.Description);
+        }
+
+        // Correct Special
+
+        [Fact]
+        public void ShouldReturnAllSpecialWhenNeeded()
+        {
+            Water water = new Water();
+            water.HoldIce();
+            water.AddLemon();
+
+            Assert.Contains("Hold ice", water.Special);
+            Assert.Contains("Add lemon", water.Special);
+        }
+
+        [Fact]
+        public void ShouldReturnHoldIce()
+        {
+            Water water = new Water();
+            water.HoldIce();
+
+            Assert.Contains("Hold ice", water.Special);
+            Assert.Single(water.Special);
+        }
+
+        [Fact]
+        public void ShouldReturnAddLemon()
+        {
+            Water water = new Water();
+            water.AddLemon();
+
+            Assert.Contains("Add lemon", water.Special);
+            Assert.Single(water.Special);
+        }
     }
 }
