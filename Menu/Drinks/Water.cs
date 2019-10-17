@@ -19,7 +19,11 @@ namespace DinoDiner.Menu
         public override Size Size
         {
             get => size;
-            set => size = value;
+            set
+            {
+                size = value;
+                NotifyOfPropertyChanged("Size");
+            }
         }
 
         /// <summary>

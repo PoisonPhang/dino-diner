@@ -220,5 +220,35 @@ namespace MenuTest.Drinks
             sodasaurus.HoldIce();
             Assert.Contains("Hold Ice", sodasaurus.Special);
         }
+
+        [Fact]
+        public void ShouldUpdatePriceWhenSizeChanged()
+        {
+            Sodasaurus sodasaurus = new Sodasaurus();
+            Assert.PropertyChanged(sodasaurus, "Price", () =>
+            {
+                sodasaurus.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSizeWhenSizeChanged()
+        {
+            Sodasaurus sodasaurus = new Sodasaurus();
+            Assert.PropertyChanged(sodasaurus, "Size", () =>
+            {
+                sodasaurus.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenHoldIce()
+        {
+            Sodasaurus sodasaurus = new Sodasaurus();
+            Assert.PropertyChanged(sodasaurus, "Special", () =>
+            {
+                sodasaurus.HoldIce();
+            });
+        }
     }
 }

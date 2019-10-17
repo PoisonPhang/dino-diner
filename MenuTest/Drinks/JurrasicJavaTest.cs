@@ -213,5 +213,55 @@ namespace MenuTest.Drinks
 
             Assert.Contains("Make Decaf", jurassicJava.Special);
         }
+
+        [Fact]
+        public void ShouldUpdatePriceWhenSizeChanged()
+        {
+            JurassicJava jurassicJava = new JurassicJava();
+            Assert.PropertyChanged(jurassicJava, "Price", () =>
+            {
+                jurassicJava.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSizeWhenSizeChanged()
+        {
+            JurassicJava jurassicJava = new JurassicJava();
+            Assert.PropertyChanged(jurassicJava, "Size", () =>
+            {
+                jurassicJava.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenDecaf()
+        {
+            JurassicJava jurassicJava = new JurassicJava();
+            Assert.PropertyChanged(jurassicJava, "Special", () =>
+            {
+                jurassicJava.Decaf = true;
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenRoomForCream()
+        {
+            JurassicJava jurassicJava = new JurassicJava();
+            Assert.PropertyChanged(jurassicJava, "Special", () =>
+            {
+                jurassicJava.LeaveSpaceForCream();
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenAddIce()
+        {
+            JurassicJava jurassicJava = new JurassicJava();
+            Assert.PropertyChanged(jurassicJava, "Special", () =>
+            {
+                jurassicJava.AddIce();
+            });
+        }
     }
 }

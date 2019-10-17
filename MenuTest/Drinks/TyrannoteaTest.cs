@@ -289,5 +289,60 @@ namespace MenuTest.Drinks
             Assert.Contains("Add Lemon", tyrannotea.Special);
             Assert.Single(tyrannotea.Special);
         }
+
+        [Fact]
+        public void ShouldUpdatePriceWhenSizeChanged()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+
+            Assert.PropertyChanged(tyrannotea, "Price", () => 
+            {
+                tyrannotea.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSizeWhenSizeChanged()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+
+            Assert.PropertyChanged(tyrannotea, "Size", () =>
+            {
+                tyrannotea.Size = Size.Large;
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenSweet()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+
+            Assert.PropertyChanged(tyrannotea, "Special", () =>
+            {
+                tyrannotea.Sweet = true;
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenAddLemon()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+
+            Assert.PropertyChanged(tyrannotea, "Special", () =>
+            {
+                tyrannotea.AddLemon();
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenHoldIce()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+
+            Assert.PropertyChanged(tyrannotea, "Special", () =>
+            {
+                tyrannotea.HoldIce();
+            });
+        }
     }
 }

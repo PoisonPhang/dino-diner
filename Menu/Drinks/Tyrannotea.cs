@@ -41,6 +41,8 @@ namespace DinoDiner.Menu
                         this.Calories = sweet ? (uint) 16 : 8;
                         break;
                 }
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Size");
             }
         }
 
@@ -62,7 +64,7 @@ namespace DinoDiner.Menu
                 {
                     ingredients.Remove(caneSugar);
                 }
-                NotifyOfPropertyChanged("Sweet");
+                NotifyOfPropertyChanged("Special");
             }
         }
 

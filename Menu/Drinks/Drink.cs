@@ -61,7 +61,7 @@ namespace DinoDiner.Menu
 
         protected void NotifyOfPropertyChanged(string property)
         {
-            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(property));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
 
         /// <summary>
