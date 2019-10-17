@@ -49,14 +49,11 @@ namespace DinoDiner.Menu
         {
             get
             {
-                string[] special = new string[1];
+                List<string> special = new List<string>();
 
-                if (!Ice)
-                {
-                    special[0] = "Hold ice";
-                }
+                if (!Ice) special.Add("Hold ice");
 
-                return special;
+                return special.ToArray();
             }
         }
 

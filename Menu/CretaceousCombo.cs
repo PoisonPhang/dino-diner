@@ -29,10 +29,10 @@ namespace DinoDiner.Menu
             protected set
             {
                 entree = value;
-                entree.PropertyChanged += (object senter, PropertyChangedEventArgs args) =>
-                {
-                    NotifyOfPropertyChanged(args.PropertyName);
-                };
+                //entree.PropertyChanged += (object senter, PropertyChangedEventArgs args) =>
+                //{
+                //    NotifyOfPropertyChanged(args.PropertyName);
+                //};
             }
         }
         public Drink Drink

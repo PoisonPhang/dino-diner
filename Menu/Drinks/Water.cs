@@ -31,21 +31,12 @@ namespace DinoDiner.Menu
         {
             get
             {
-                string[] special = new string[2];
-                int index = 0;
+                List<string> special = new List<string>();
 
-                if (!Ice)
-                {
-                    special[index] = "Hold ice";
-                    index++;
-                }
-                if (Lemon)
-                {
-                    special[index] = "Add lemon";
-                    index++;
-                }
+                if (!Ice) special.Add("Hold ice");
+                if (Lemon) special.Add("Add lemon");
 
-                return special;
+                return special.ToArray();
             }
         }
 

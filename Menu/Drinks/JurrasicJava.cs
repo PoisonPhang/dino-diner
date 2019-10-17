@@ -55,20 +55,10 @@ namespace DinoDiner.Menu
             get
             {
                 List<string> special = new List<string>();
-                int index = 0;
 
-                if (SpaceForCream)
-                {
-                    special.Add("Leave space for cream");
-                }
-                if (Ice)
-                {
-                    special.Add("Add Ice");
-                }
-                if (Decaf)
-                {
-                    special.Add("Make Decaf");
-                }
+                if (SpaceForCream) special.Add("Leave space for cream");
+                if (Ice) special.Add("Add Ice");
+                if (Decaf) special.Add("Make Decaf");
 
                 return special.ToArray();
             }
