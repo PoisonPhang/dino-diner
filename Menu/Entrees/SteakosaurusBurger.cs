@@ -39,31 +39,14 @@ namespace DinoDiner.Menu
         {
             get
             {
-                string[] special = new string[4];
-                int index = 0;
+                List<string> special = new List<string>();
 
-                if (!bun)
-                {
-                    special[index] = "Hold bun";
-                    index++;
-                }
-                if (!pickle)
-                {
-                    special[index] = "Hold pickle";
-                    index++;
-                }
-                if (!ketchup)
-                {
-                    special[index] = "Hold ketchup";
-                    index++;
-                }
-                if (!mustard)
-                {
-                    special[index] = "Hold mustard";
-                    index++;
-                }
+                if (!bun) special.Add("Hold Bun");
+                if (!pickle) special.Add("Hold Pickle");
+                if (!ketchup) special.Add("Hold Ketchup");
+                if (!mustard) special.Add("Hold Mustard");
 
-                return special;
+                return special.ToArray();
             }
         }
 
@@ -82,6 +65,7 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             bun = false;
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -90,6 +74,7 @@ namespace DinoDiner.Menu
         public void HoldPickle()
         {
             pickle = false;
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -98,6 +83,7 @@ namespace DinoDiner.Menu
         public void HoldKetchup()
         {
             ketchup = false;
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -106,6 +92,7 @@ namespace DinoDiner.Menu
         public void HoldMustard()
         {
             mustard = false;
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()

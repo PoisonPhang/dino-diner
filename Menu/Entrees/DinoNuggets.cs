@@ -38,8 +38,13 @@ namespace DinoDiner.Menu
         {
             get
             {
-                string[] special = new string[0];
-                return special;
+                List<string> special = new List<string>();
+                if (ingredients.Count > 6)
+                {
+                    special.Add($"Add {ingredients.Count - 6} Chicken Nugget(s)");
+                }
+
+                return special.ToArray();
             }
         }
 
@@ -65,6 +70,7 @@ namespace DinoDiner.Menu
             ingredients.Add("Chicken Nugget");
             Price += 0.25;
             Calories += 59;
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()

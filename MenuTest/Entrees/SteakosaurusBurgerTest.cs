@@ -64,6 +64,81 @@ namespace MenuTest.Entrees
             sb.HoldMustard();
             Assert.DoesNotContain<string>("Mustard", sb.Ingredients);
         }
-    }
 
+        // Correct Description
+
+        [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+
+            Assert.Equal("Steakosaurus Burger", sb.Description);
+        }
+
+        // Correct Special
+
+        [Fact]
+        public void ShouldHaveCorrectDefualtSpecial()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+
+            Assert.Empty(sb.Special);
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectSpecialAfterHoldBun()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            sb.HoldBun();
+
+            Assert.Contains("Hold Bun", sb.Special);
+            Assert.Single(sb.Special);
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectSpecialAfterHoldPickle()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            sb.HoldPickle();
+
+            Assert.Contains("Hold Pickle", sb.Special);
+            Assert.Single(sb.Special);
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectSpecialAfterHoldKetchup()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            sb.HoldKetchup();
+
+            Assert.Contains("Hold Ketchup", sb.Special);
+            Assert.Single(sb.Special);
+        }
+
+        [Fact]
+        public void ShouldHaveCorrectSpecialAfterHoldMustard()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            sb.HoldMustard();
+
+            Assert.Contains("Hold Mustard", sb.Special);
+            Assert.Single(sb.Special);
+        }
+
+        [Fact]
+        public void ShouldHaveAllSpecialAfterHoldAll()
+        {
+            SteakosaurusBurger sb = new SteakosaurusBurger();
+            sb.HoldBun();
+            sb.HoldPickle();
+            sb.HoldKetchup();
+            sb.HoldMustard();
+
+            Assert.Contains("Hold Bun", sb.Special);
+            Assert.Contains("Hold Pickle", sb.Special);
+            Assert.Contains("Hold Ketchup", sb.Special);
+            Assert.Contains("Hold Mustard", sb.Special);
+            Assert.Equal(4, sb.Special.Length);
+        }
+    }
 }

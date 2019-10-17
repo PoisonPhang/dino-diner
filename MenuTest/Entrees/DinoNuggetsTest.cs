@@ -67,11 +67,11 @@ namespace MenuTest.Entrees
         {
             DinoNuggets dn = new DinoNuggets();
             dn.AddNugget();
-            Assert.Equal(dn.Price, 4.50, 2);
+            Assert.Equal(4.50, dn.Price, 2);
             dn.AddNugget();
-            Assert.Equal(dn.Price, 4.75, 2);
+            Assert.Equal(4.75, dn.Price, 2);
             dn.AddNugget();
-            Assert.Equal(dn.Price, 5.0, 2);
+            Assert.Equal(5.0, dn.Price, 2);
         }
 
         [Fact]
@@ -84,6 +84,49 @@ namespace MenuTest.Entrees
             Assert.Equal<uint>(dn.Calories, 59*8);
             dn.AddNugget();
             Assert.Equal<uint>(dn.Calories, 59*9);
+        }
+
+        // Correct Description
+
+        [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            DinoNuggets dn = new DinoNuggets();
+
+            Assert.Equal("Dino-Nuggets", dn.Description);
+        }
+
+        // Correct Special
+
+        [Fact]
+        public void SpecialShouldHaveCorrectNumberAdditionalOfNuggets()
+        {
+            DinoNuggets dn = new DinoNuggets();
+
+            Assert.Empty(dn.Special);
+
+            dn.AddNugget();
+
+            Assert.Contains("Add 1 Chicken Nugget(s)", dn.Special);
+            Assert.Single(dn.Special);
+
+            dn.AddNugget();
+
+            Assert.Contains("Add 2 Chicken Nugget(s)", dn.Special);
+            Assert.Single(dn.Special);
+        }
+
+        // Correct notification of change
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenAddNugget()
+        {
+            DinoNuggets dn = new DinoNuggets();
+
+            Assert.PropertyChanged(dn, "Special", () =>
+            {
+                dn.AddNugget();
+            });
         }
     }
 }

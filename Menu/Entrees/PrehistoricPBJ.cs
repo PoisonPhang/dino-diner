@@ -12,16 +12,6 @@ namespace DinoDiner.Menu
         private bool peanutButter = true;
         private bool jelly = true;
 
-        /// <summary>
-        /// An event handler for PropertyChanged
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void NotifyOfPropertyChanged(string property)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
-        }
-
         public override List<string> Ingredients
         {
             get
@@ -55,13 +45,13 @@ namespace DinoDiner.Menu
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
-            NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
 
         public void HoldJelly()
         {
             this.jelly = false;
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()

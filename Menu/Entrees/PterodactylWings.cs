@@ -31,8 +31,7 @@ namespace DinoDiner.Menu
         {
             get
             {
-                string[] special = new string[0];
-                return special;
+                return new string[0];
             }
         }
 

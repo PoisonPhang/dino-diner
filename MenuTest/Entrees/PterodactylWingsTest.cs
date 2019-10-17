@@ -30,5 +30,24 @@ namespace MenuTest.Entrees
             Assert.Equal<int>(2, ingredients.Count);
         }
 
+        // Correct Description
+
+        [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            PterodactylWings pw = new PterodactylWings();
+
+            Assert.Equal("Pterodactyl Wings", pw.Description);
+        }
+
+        // Correct Special
+
+        [Fact]
+        public void ShouldHaveCorrectDefualtSpeical()
+        {
+            PterodactylWings pw = new PterodactylWings();
+
+            Assert.Empty(pw.Special);
+        }
     }
 }

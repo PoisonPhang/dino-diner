@@ -38,26 +38,13 @@ namespace DinoDiner.Menu
         {
             get
             {
-                string[] special = new string[3];
-                int index = 0;
+                List<string> special = new List<string>();
 
-                if (!dressing)
-                {
-                    special[index] = "Hold dressing";
-                    index++;
-                }
-                if (!lettuce)
-                {
-                    special[index] = "Hold lettuce";
-                    index++;
-                }
-                if (!cheese)
-                {
-                    special[index] = "Hold cheese";
-                    index++;
-                }
+                if (!dressing) special.Add("Hold Dressing");
+                if (!lettuce) special.Add("Hold Lettuce");
+                if (!cheese) special.Add("Hold Cheese");
 
-                return special;
+                return special.ToArray();
             }
         }
 
@@ -76,6 +63,7 @@ namespace DinoDiner.Menu
         public void HoldDressing()
         {
             dressing = false;
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -84,6 +72,7 @@ namespace DinoDiner.Menu
         public void HoldLettuce()
         {
             lettuce = false;
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -92,6 +81,7 @@ namespace DinoDiner.Menu
         public void HoldCheese()
         {
             cheese = false;
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()

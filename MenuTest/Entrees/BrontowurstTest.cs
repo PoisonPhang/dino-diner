@@ -55,6 +55,105 @@ namespace MenuTest.Entrees
             bw.HoldOnion();
             Assert.DoesNotContain<string>("Onion", bw.Ingredients);
         }
+
+        // Correct Description
+
+        [Fact]
+        public void ShouldHaveCorrectDescription()
+        {
+            Brontowurst bw = new Brontowurst();
+
+            Assert.Equal("Brontowurst", bw.Description);
+        }
+
+        // Correct Special
+
+        [Fact]
+        public void ShouldHaveEmptySpecialDefualt()
+        {
+            Brontowurst bw = new Brontowurst();
+
+            Assert.Empty(bw.Special);
+        }
+
+        [Fact]
+        public void SpecialShouldHaveHoldBunWhenHoldBun()
+        {
+            Brontowurst bw = new Brontowurst();
+            bw.HoldBun();
+
+            Assert.Contains("Hold Bun", bw.Special);
+            Assert.Single(bw.Special);
+        }
+
+        [Fact]
+        public void SpecialShouldHaveHoldPeppersWhenHoldPeppers()
+        {
+            Brontowurst bw = new Brontowurst();
+            bw.HoldPeppers();
+
+            Assert.Contains("Hold Peppers", bw.Special);
+            Assert.Single(bw.Special);
+        }
+
+        [Fact]
+        public void SpecialShouldHaveHoldOnionsWhenHoldOnions()
+        {
+            Brontowurst bw = new Brontowurst();
+            bw.HoldOnion();
+
+            Assert.Contains("Hold Onion", bw.Special);
+            Assert.Single(bw.Special);
+        }
+
+        [Fact]
+        public void SpecialShouldContainAllThreeWhenHoldAll()
+        {
+            Brontowurst bw = new Brontowurst();
+            bw.HoldBun();
+            bw.HoldPeppers();
+            bw.HoldOnion();
+
+            Assert.Contains("Hold Bun", bw.Special);
+            Assert.Contains("Hold Peppers", bw.Special);
+            Assert.Contains("Hold Onion", bw.Special);
+            Assert.Equal(3, bw.Special.Length);
+        }
+
+        // Notifies on property change
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenHoldBun()
+        {
+            Brontowurst bw = new Brontowurst();
+
+            Assert.PropertyChanged(bw, "Special", () =>
+            {
+                bw.HoldBun();
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenHoldPeppers()
+        {
+            Brontowurst bw = new Brontowurst();
+
+            Assert.PropertyChanged(bw, "Special", () =>
+            {
+                bw.HoldPeppers();
+            });
+        }
+
+        [Fact]
+        public void ShouldUpdateSpecialWhenHoldOnion()
+        {
+            Brontowurst bw = new Brontowurst();
+
+            Assert.PropertyChanged(bw, "Special", () =>
+            {
+                bw.HoldOnion();
+            });
+        }
     }
 
 }
