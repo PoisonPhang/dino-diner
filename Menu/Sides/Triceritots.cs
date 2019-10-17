@@ -34,6 +34,7 @@ namespace DinoDiner.Menu
                         this.Calories = 352;
                         break;
                 }
+                NotifyOfPropertyChanged("Price");
             }
         }
 

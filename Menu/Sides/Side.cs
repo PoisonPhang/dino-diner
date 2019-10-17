@@ -5,10 +5,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public abstract class Side : IMenuItem, IOrderItem
+    public abstract class Side : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         protected List<string> ingredients = new List<string>();
         protected Size size;
@@ -47,5 +48,12 @@ namespace DinoDiner.Menu
         public string Description => ToString();
 
         public abstract string[] Special { get; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string property)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
     }
 }
