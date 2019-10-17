@@ -62,6 +62,7 @@ namespace DinoDiner.Menu
                 {
                     ingredients.Remove(caneSugar);
                 }
+                NotifyOfPropertyChanged("Sweet");
             }
         }
 
@@ -76,9 +77,9 @@ namespace DinoDiner.Menu
             {
                 List<string> special = new List<string>();
 
-                if (!Ice) special.Add("Hold ice");
-                if (Sweet) special.Add("Make sweet");
-                if (Lemon) special.Add("Add lemon");
+                if (!Ice) special.Add("Hold Ice");
+                if (Sweet) special.Add("Make Sweet");
+                if (Lemon) special.Add("Add Lemon");
 
                 return special.ToArray();
             }
@@ -103,6 +104,7 @@ namespace DinoDiner.Menu
         {
             Lemon = true;
             ingredients.Add("Lemon");
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()

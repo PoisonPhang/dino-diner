@@ -33,8 +33,8 @@ namespace DinoDiner.Menu
             {
                 List<string> special = new List<string>();
 
-                if (!Ice) special.Add("Hold ice");
-                if (Lemon) special.Add("Add lemon");
+                if (!Ice) special.Add("Hold Ice");
+                if (Lemon) special.Add("Add Lemon");
 
                 return special.ToArray();
             }
@@ -58,6 +58,7 @@ namespace DinoDiner.Menu
         {
             Lemon = true;
             ingredients.Add("Lemon");
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()

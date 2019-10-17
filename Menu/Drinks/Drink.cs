@@ -5,13 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Abstract drink class for creating drink objects types
     /// </summary>
-    public abstract class Drink : IMenuItem, IOrderItem
+    public abstract class Drink : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         protected List<string> ingredients = new List<string>();
         protected Size size = Size.Small;
@@ -56,12 +57,20 @@ namespace DinoDiner.Menu
 
         public abstract string[] Special { get; }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string property)
+        {
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(property));
+        }
+
         /// <summary>
         /// Removes ice from the drink
         /// </summary>
         public void HoldIce()
         {
             Ice = false;
+            NotifyOfPropertyChanged("Special");
         }
     }
 }

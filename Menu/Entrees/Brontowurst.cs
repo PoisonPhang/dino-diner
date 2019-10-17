@@ -36,26 +36,13 @@ namespace DinoDiner.Menu
         {
             get
             {
-                string[] special = new string[3];
-                int index = 0;
+                List<string> special = new List<string>();
 
-                if (!bun)
-                {
-                    special[index] = "Hold bun";
-                    index++;
-                }
-                if (!peppers)
-                {
-                    special[index] = "Hold peppers";
-                    index++;
-                }
-                if (!onion)
-                {
-                    special[index] = "Hold onion";
-                    index++;
-                }
+                if (!bun) special.Add("Hold Bun");
+                if (!peppers) special.Add("Hold Peppers");
+                if (!onion) special.Add("Hold Onion");
 
-                return special;
+                return special.ToArray();
             }
         }
 

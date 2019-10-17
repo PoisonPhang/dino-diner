@@ -241,6 +241,13 @@ namespace MenuTest.Drinks
         // Correct special values
 
         [Fact]
+        public void ShouldReturnNoSpecialDefualt()
+        {
+            Tyrannotea tyrannotea = new Tyrannotea();
+            Assert.Empty(tyrannotea.Special);
+        }
+
+        [Fact]
         public void ShouldReturnAllSpecialValuesWhenNeeded()
         {
             Tyrannotea tyrannotea = new Tyrannotea();
@@ -248,9 +255,9 @@ namespace MenuTest.Drinks
             tyrannotea.Sweet = true;
             tyrannotea.AddLemon();
 
-            Assert.Contains("Hold ice", tyrannotea.Special);
-            Assert.Contains("Make sweet", tyrannotea.Special);
-            Assert.Contains("Add lemon", tyrannotea.Special);
+            Assert.Contains("Hold Ice", tyrannotea.Special);
+            Assert.Contains("Make Sweet", tyrannotea.Special);
+            Assert.Contains("Add Lemon", tyrannotea.Special);
         }
 
         [Fact]
@@ -259,7 +266,7 @@ namespace MenuTest.Drinks
             Tyrannotea tyrannotea = new Tyrannotea();
             tyrannotea.HoldIce();
 
-            Assert.Contains("Hold ice", tyrannotea.Special);
+            Assert.Contains("Hold Ice", tyrannotea.Special);
             Assert.Single(tyrannotea.Special);
         }
 
@@ -269,7 +276,7 @@ namespace MenuTest.Drinks
             Tyrannotea tyrannotea = new Tyrannotea();
             tyrannotea.Sweet = true;
 
-            Assert.Contains("Make sweet", tyrannotea.Special);
+            Assert.Contains("Make Sweet", tyrannotea.Special);
             Assert.Single(tyrannotea.Special);
         }
 
@@ -279,7 +286,7 @@ namespace MenuTest.Drinks
             Tyrannotea tyrannotea = new Tyrannotea();
             tyrannotea.AddLemon();
 
-            Assert.Contains("Add lemon", tyrannotea.Special);
+            Assert.Contains("Add Lemon", tyrannotea.Special);
             Assert.Single(tyrannotea.Special);
         }
     }

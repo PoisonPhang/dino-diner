@@ -13,6 +13,8 @@ namespace DinoDiner.Menu
     /// </summary>
     public class JurassicJava : Drink
     {
+        private bool decaf = false;
+
         /// <summary>
         /// Size property of this JurrasicJava instance
         /// </summary>
@@ -37,18 +39,29 @@ namespace DinoDiner.Menu
                         this.Calories = 2;
                         break;
                 }
+                NotifyOfPropertyChanged("Size");
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Calories");
             }
         }
 
         /// <summary>
         /// If this instance of JurrasicJava should leave room for cream
         /// </summary>
-        public bool SpaceForCream { get; set; }
+        public bool SpaceForCream { get; private set; }
 
         /// <summary>
         /// If this inttance of JurrasicJava should be decaf
         /// </summary>
-        public bool Decaf { get; set; }
+        public bool Decaf
+        {
+            get => decaf;
+            set
+            {
+                decaf = value;
+                NotifyOfPropertyChanged("Special");
+            }
+        }
 
         public override string[] Special
         {
@@ -56,7 +69,7 @@ namespace DinoDiner.Menu
             {
                 List<string> special = new List<string>();
 
-                if (SpaceForCream) special.Add("Leave space for cream");
+                if (SpaceForCream) special.Add("Leave Space For Cream");
                 if (Ice) special.Add("Add Ice");
                 if (Decaf) special.Add("Make Decaf");
 
@@ -82,6 +95,7 @@ namespace DinoDiner.Menu
         public void LeaveSpaceForCream()
         {
             SpaceForCream = true;
+            NotifyOfPropertyChanged("Special");
         }
 
         /// <summary>
@@ -90,6 +104,7 @@ namespace DinoDiner.Menu
         public void AddIce()
         {
             Ice = true;
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()

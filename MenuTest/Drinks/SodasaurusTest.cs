@@ -207,11 +207,18 @@ namespace MenuTest.Drinks
         // Should Return correct special values
 
         [Fact]
+        public void ShouldReturnNoSpeicalDefualt()
+        {
+            Sodasaurus sodasaurus = new Sodasaurus();
+            Assert.Empty(sodasaurus.Special);
+        }
+
+        [Fact]
         public void ShouldReturnHoldIce()
         {
             Sodasaurus sodasaurus = new Sodasaurus();
             sodasaurus.HoldIce();
-            Assert.Contains("Hold ice", sodasaurus.Special);
+            Assert.Contains("Hold Ice", sodasaurus.Special);
         }
     }
 }

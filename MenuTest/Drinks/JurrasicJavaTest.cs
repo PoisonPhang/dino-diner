@@ -168,6 +168,13 @@ namespace MenuTest.Drinks
         // Special item test
 
         [Fact]
+        public void ShouldReturnNoSpecialDefualt()
+        {
+            JurassicJava jurassicJava = new JurassicJava();
+            Assert.Empty(jurassicJava.Special);
+        }
+
+        [Fact]
         public void ShouldReturnAllSpecialsWhenNeeded()
         {
             JurassicJava jurrasicJava = new JurassicJava();
@@ -175,7 +182,7 @@ namespace MenuTest.Drinks
             jurrasicJava.AddIce();
             jurrasicJava.Decaf = true;
 
-            Assert.Contains("Leave space for cream", jurrasicJava.Special);
+            Assert.Contains("Leave Space For Cream", jurrasicJava.Special);
             Assert.Contains("Add Ice", jurrasicJava.Special);
             Assert.Contains("Make Decaf", jurrasicJava.Special);
         }
@@ -186,7 +193,7 @@ namespace MenuTest.Drinks
             JurassicJava jurassicJava = new JurassicJava();
             jurassicJava.LeaveSpaceForCream();
 
-            Assert.Contains("Leave space for cream", jurassicJava.Special);
+            Assert.Contains("Leave Space For Cream", jurassicJava.Special);
         }
 
         [Fact]
