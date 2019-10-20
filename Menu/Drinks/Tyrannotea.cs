@@ -73,6 +73,9 @@ namespace DinoDiner.Menu
         /// </summary>
         public bool Lemon { get; set; }
 
+        /// <summary>
+        /// Special instructions for Tyrannotea
+        /// </summary>
         public override string[] Special
         {
             get

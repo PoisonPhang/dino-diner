@@ -13,6 +13,9 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Triceritots : Side
     {
+        /// <summary>
+        /// Size of Triceritots
+        /// </summary>
         public override Size Size
         {
             get => size;
@@ -38,6 +41,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for Triceritots
+        /// </summary>
         public override string[] Special
         {
             get

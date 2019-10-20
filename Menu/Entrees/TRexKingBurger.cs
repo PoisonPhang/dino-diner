@@ -45,6 +45,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for TRexKingBurger
+        /// </summary>
         public override string[] Special
         {
             get

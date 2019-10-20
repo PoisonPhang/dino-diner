@@ -35,6 +35,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for SteakosaurusBurger
+        /// </summary>
         public override string[] Special
         {
             get

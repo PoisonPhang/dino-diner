@@ -1,5 +1,4 @@
-﻿/*
- * Brontowurst.cs
+﻿/* Brontowurst.cs
  * Author: Connor Davis
  */
 using System;
@@ -32,6 +31,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for Brontowurst
+        /// </summary>
         public override string[] Special
         {
             get

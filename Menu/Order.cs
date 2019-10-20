@@ -11,12 +11,16 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Representation of an order
     /// </summary>
-    class Order
+    public class Order
     {
+        ObservableCollection<IOrderItem> items = new ObservableCollection<IOrderItem>();
         /// <summary>
         /// Items in the current order
         /// </summary>
-        public ObservableCollection<IOrderItem> Items { get; set; }
+        public ObservableCollection<IOrderItem> Items {
+            get => items;
+            set => items = value;
+        }
 
         /// <summary>
         /// Cost of order before tax
@@ -39,7 +43,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Sales tax rate of the order
         /// </summary>
-        public double SalesTaxRate { get; protected set; }
+        public double SalesTaxRate { get; protected set; } = 0.05;
 
         /// <summary>
         /// Cost of the sales tax for the order

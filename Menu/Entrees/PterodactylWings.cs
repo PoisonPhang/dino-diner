@@ -27,6 +27,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for PterodactylWings
+        /// </summary>
         public override string[] Special
         {
             get

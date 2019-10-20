@@ -45,12 +45,25 @@ namespace DinoDiner.Menu
         /// </summary>
         public abstract Size Size { get; set; }
 
+        /// <summary>
+        /// Discription of sides
+        /// </summary>
         public string Description => ToString();
 
+        /// <summary>
+        /// Special instructions of sides
+        /// </summary>
         public abstract string[] Special { get; }
 
+        /// <summary>
+        /// Event handler for property changed notification
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Notifies of a property update
+        /// </summary>
+        /// <param name="property">name of property</param>
         protected void NotifyOfPropertyChanged(string property)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));

@@ -34,6 +34,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for DinoNuggets
+        /// </summary>
         public override string[] Special
         {
             get

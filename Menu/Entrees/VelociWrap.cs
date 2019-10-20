@@ -34,6 +34,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instrunctions for VelociWrap
+        /// </summary>
         public override string[] Special
         {
             get

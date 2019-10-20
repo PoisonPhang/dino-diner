@@ -7,11 +7,17 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// PrehistoricPBJ Menu item
+    /// </summary>
     public class PrehistoricPBJ : Entree, INotifyPropertyChanged
     {
         private bool peanutButter = true;
         private bool jelly = true;
 
+        /// <summary>
+        /// Ingredients of PrehistoricPBJ
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -23,6 +29,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for PrehistoricPBJ
+        /// </summary>
         public override string[] Special
         {
             get
@@ -36,18 +45,27 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Constructs a new instance of PrehistoricPBJ
+        /// </summary>
         public PrehistoricPBJ()
         {
             this.Price = 6.52;
             this.Calories = 483;
         }
 
+        /// <summary>
+        /// Holds peanutbutter for instance of PrehistoricPBJ
+        /// </summary>
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
             NotifyOfPropertyChanged("Special");
         }
 
+        /// <summary>
+        /// Holds jelly for instance of PrehistoricPBJ
+        /// </summary>
         public void HoldJelly()
         {
             this.jelly = false;

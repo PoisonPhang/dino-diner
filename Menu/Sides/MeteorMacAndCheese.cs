@@ -41,6 +41,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for MeteorMacAndCheese
+        /// </summary>
         public override string[] Special
         {
             get

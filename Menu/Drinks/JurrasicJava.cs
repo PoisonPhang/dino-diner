@@ -62,6 +62,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for JurassicJava
+        /// </summary>
         public override string[] Special
         {
             get

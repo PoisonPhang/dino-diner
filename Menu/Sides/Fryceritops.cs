@@ -41,6 +41,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Special instructions for Fryceritops
+        /// </summary>
         public override string[] Special
         {
             get
