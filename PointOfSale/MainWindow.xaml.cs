@@ -27,7 +27,7 @@ namespace PointOfSale
         public MainWindow()
         {
             InitializeComponent();
-            Order order = new Order();
+            Order order = DataContext as Order;
             order.Items.Add(new PrehistoricPBJ());
             order.Items.Add(new Sodasaurus());
             order.Items.Add(new Fryceritops());
@@ -35,7 +35,6 @@ namespace PointOfSale
             sb.HoldPickle();
             sb.HoldBun();
             order.Items.Add(sb);
-            DataContext = order;
         }
     }
 }
