@@ -23,6 +23,7 @@
 
         <local:OrderList Grid.Column="1"></local:OrderList>
 
-        <Frame Source="MenuCategorySelection.xaml"></Frame>
+        <Frame x:Name="OrderUI" LoadCompleted="OnLoadCompleted" DataContextChanged="OnDataContextChanged" 
+               Source="MenuCategorySelection.xaml"/>
     </Grid>
 </Window>

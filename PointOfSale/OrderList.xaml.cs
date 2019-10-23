@@ -24,5 +24,13 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+
+        private void OnSelectionChanged(Object sender, EventArgs args)
+        {
+            if (OrderItems.SelectedItem is DinoDiner.Menu.Side side)
+            {
+
+            }
+        }
     }
 }

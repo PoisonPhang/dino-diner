@@ -22,7 +22,7 @@
                     <Setter Property="Margin" Value="10"/>
                 </Style>
             </WrapPanel.Resources>
-            <Button>
+            <Button Click="OnSelectFryceritops">
                 <StackPanel>
                     <Image Width="50" Source="Assets/DinoDiner-08.png"/>
                     <TextBlock>Fryceritops</TextBlock>
@@ -56,9 +56,9 @@
             </StackPanel.Resources>
 
             <Label FontWeight="Bold">Size</Label>
-            <RadioButton GroupName="Size" Content="Small"/>
-            <RadioButton GroupName="Size" Content="Medium"/>
-            <RadioButton GroupName="Size" Content="Large"/>
+            <RadioButton GroupName="Size" Content="Small" Tag="Small" Click="OnChangeSize"/>
+            <RadioButton GroupName="Size" Content="Medium" Tag="Medium" Click="OnChangeSize"/>
+            <RadioButton GroupName="Size" Content="Large" Tag="Large" Click="OnChangeSize"/>
         </StackPanel>
     </Grid>
 </Page>
