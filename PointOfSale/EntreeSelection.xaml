@@ -16,43 +16,43 @@
                 <Setter Property="Margin" Value="10"/>
             </Style>
         </WrapPanel.Resources>
-        <Button>
+        <Button Click="OnSelectBrontowurst">
             <StackPanel>
                 <Image Width="50" Source="Assets/DinoDiner-01.png"/>
                 <TextBlock>Brontowurst</TextBlock>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectDinoNuggets">
             <StackPanel>
                 <Image Width="50" Source="Assets/DinoDiner-02.png"/>
                 <TextBlock>Dino-Nuggets</TextBlock>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectPPBJ">
             <StackPanel>
                 <Image Width="50" Source="Assets/DinoDiner-03.png"/>
                 <TextBlock>Prehistoric PB&amp;J</TextBlock>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectPterodactylWings">
             <StackPanel>
                 <Image Width="50" Source="Assets/DinoDiner-04.png"/>
                 <TextBlock>Pterodactyl Wings</TextBlock>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectSteakosarusBurger">
             <StackPanel>
                 <Image Width="50" Source="Assets/DinoDiner-05.png"/>
                 <TextBlock>Steakosarus Burger</TextBlock>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectTKB">
             <StackPanel>
                 <Image Width="50" Source="Assets/DinoDiner-06.png"/>
                 <TextBlock>T-Rex King Burger</TextBlock>
             </StackPanel>
         </Button>
-        <Button>
+        <Button Click="OnSelectVelociWrap">
             <StackPanel>
                 <Image Width="50" Source="Assets/DinoDiner-07.png"/>
                 <TextBlock>Veloci-Wrap</TextBlock>

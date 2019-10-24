@@ -40,12 +40,39 @@ namespace PointOfSale
             }
         }
 
+        private void OnSelectTriceritots(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                side = new Triceritots();
+                order.Items.Add(side);
+            }
+        }
+
+        private void OnSelectMMC(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                side = new MeteorMacAndCheese();
+                order.Items.Add(side);
+            }
+        }
+
+        private void OnSelectMozzerellaSticks(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                side = new MezzorellaSticks();
+                order.Items.Add(side);
+            }
+        }
+
         private void OnChangeSize(object sender, RoutedEventArgs args)
         {
             if (sender is RadioButton radioButton)
             {
                 side.Size = (DinoDiner.Menu.Size)Enum.Parse(typeof(DinoDiner.Menu.Size), radioButton.Tag.ToString());
-                side.Size = DinoDiner.Menu.Size.Large;
+                NavigationService.Navigate(new MenuCategorySelection());
             }
         }
     }

@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -25,6 +26,7 @@ namespace PointOfSale
     {
         private List<Button> drinks;
         private List<Button> options;
+        private Drink drink;
         public DrinkSelection()
         {
             InitializeComponent();
@@ -48,6 +50,13 @@ namespace PointOfSale
                 button.IsEnabled = false;
 
             BFlavor.IsEnabled = true;
+
+            if (DataContext is Order order)
+            {
+                drink = new Sodasaurus();
+                order.Items.Add(drink);
+            }
+
         }
 
         /// <summary>
@@ -67,6 +76,12 @@ namespace PointOfSale
 
             BLemon.IsEnabled = true;
             BSweet.IsEnabled = true;
+
+            if (DataContext is Order order)
+            {
+                drink = new Tyrannotea();
+                order.Items.Add(drink);
+            }
         }
 
         /// <summary>
@@ -85,6 +100,12 @@ namespace PointOfSale
                 button.IsEnabled = false;
 
             BDecaf.IsEnabled = true;
+
+            if (DataContext is Order order)
+            {
+                drink = new JurassicJava();
+                order.Items.Add(drink);
+            }
         }
 
         /// <summary>
@@ -103,6 +124,33 @@ namespace PointOfSale
                 button.IsEnabled = false;
 
             BLemon.IsEnabled = true;
+
+            if (DataContext is Order order)
+            {
+                drink = new Water();
+                order.Items.Add(drink);
+            }
+        }
+
+        private void OnChangeSize(object sender, RoutedEventArgs args)
+        {
+            if (sender is RadioButton radioButton)
+            {
+                drink.Size = (DinoDiner.Menu.Size)Enum.Parse(typeof(DinoDiner.Menu.Size), radioButton.Tag.ToString());
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+        }
+
+        private void OnAddLemon(object sender, RoutedEventArgs args)
+        {
+            if (drink is Water water)
+            {
+                water.AddLemon();
+            }
+            else if (drink is Tyrannotea tyrannotea)
+            {
+                tyrannotea.AddLemon();
+            }
         }
 
         /// <summary>
@@ -113,6 +161,27 @@ namespace PointOfSale
         private void SelectFlavor(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new FlavorSelection());
+        }
+
+        private void OnMakeDecaf(object sender, RoutedEventArgs args)
+        {
+            if (drink is JurassicJava jurassicJava)
+            {
+                jurassicJava.Decaf = true;
+            }
+        }
+
+        private void OnMakeSweet(object sender, RoutedEventArgs args)
+        {
+            if (drink is Tyrannotea tyrannotea)
+            {
+                tyrannotea.Sweet = true;
+            }
+        }
+
+        private void OnSelectDone(object sender, RoutedEventArgs args)
+        {
+            NavigationService.Navigate(new MenuCategorySelection());
         }
     }
 }

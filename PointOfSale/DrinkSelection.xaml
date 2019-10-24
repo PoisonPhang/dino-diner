@@ -53,6 +53,9 @@
                         <TextBlock>Water</TextBlock>
                     </StackPanel>
                 </Button>
+                <Button Name="BDone" Click="OnSelectDone">
+                    Done
+                </Button>
             </WrapPanel>
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="LightGray">
