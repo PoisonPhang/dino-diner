@@ -65,9 +65,9 @@
                     </Style>
                 </StackPanel.Resources>
                 <Label FontWeight="Bold">Size</Label>
-                <RadioButton GroupName="Size" Content="Small"/>
-                <RadioButton GroupName="Size" Content="Medium"/>
-                <RadioButton GroupName="Size" Content="Large"/>
+                <RadioButton GroupName="Size" Content="Small" Tag="Small" Click="OnChangeSize"/>
+                <RadioButton GroupName="Size" Content="Medium" Tag="Medium" Click="OnChangeSize"/>
+                <RadioButton GroupName="Size" Content="Large" Tag="Large" Click="OnChangeSize"/>
             </StackPanel>
         </Grid>
 
@@ -80,10 +80,10 @@
                 </Style>
             </WrapPanel.Resources>
 
-            <Button Name="BLemon" IsEnabled="False">Lemon</Button>
+            <Button Name="BLemon" IsEnabled="False" Click="OnAddLemon">Lemon</Button>
             <Button Name="BFlavor" IsEnabled="False" Click="SelectFlavor">Flavor</Button>
-            <Button Name="BDecaf" IsEnabled="False">Decaf</Button>
-            <Button Name="BSweet" IsEnabled="False">Sweet</Button>
+            <Button Name="BDecaf" IsEnabled="False" Click="OnMakeDecaf">Decaf</Button>
+            <Button Name="BSweet" IsEnabled="False" Click="OnMakeSweet">Sweet</Button>
         </WrapPanel>
     </Grid>
 </Page>

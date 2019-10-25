@@ -134,10 +134,9 @@ namespace PointOfSale
 
         private void OnChangeSize(object sender, RoutedEventArgs args)
         {
-            if (sender is RadioButton radioButton)
+            if (sender is RadioButton radioButton && drink != null)
             {
                 drink.Size = (DinoDiner.Menu.Size)Enum.Parse(typeof(DinoDiner.Menu.Size), radioButton.Tag.ToString());
-                NavigationService.Navigate(new MenuCategorySelection());
             }
         }
 
