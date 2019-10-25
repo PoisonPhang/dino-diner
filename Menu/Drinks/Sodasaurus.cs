@@ -13,6 +13,8 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Sodasaurus : Drink
     {
+        private SodasaurusFlavor flavor;
+
         /// <summary>
         /// Size property of the Sodasaurus instance
         /// </summary>
@@ -46,7 +48,14 @@ namespace DinoDiner.Menu
         /// <summary>
         /// (SodasaurusFlavor) Flavor property of the Sodasaurus instance
         /// </summary>
-        public SodasaurusFlavor Flavor { get; set; }
+        public SodasaurusFlavor Flavor {
+            get => flavor;
+            set
+            {
+                flavor = value;
+                NotifyOfPropertyChanged("Description");
+            }
+        }
 
         /// <summary>
         /// Special instructions for Sodasaurus

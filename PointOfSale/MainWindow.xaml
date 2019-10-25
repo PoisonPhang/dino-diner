@@ -21,9 +21,9 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
-        <local:OrderList Grid.Column="1"></local:OrderList>
+        <local:OrderList x:Name="OrderList" Grid.Column="1"></local:OrderList>
 
         <Frame x:Name="OrderUI" LoadCompleted="OnLoadCompleted" DataContextChanged="OnDataContextChanged" 
-               Source="MenuCategorySelection.xaml"/>
+               Source="MenuCategorySelection.xaml" MinWidth="200"/>
     </Grid>
 </Window>

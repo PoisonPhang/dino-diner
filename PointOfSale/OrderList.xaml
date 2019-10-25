@@ -26,11 +26,18 @@
             <TextBlock Grid.Column="1" Text="#" FontWeight="Bold" Margin="5,0,0,0"/>
         </Grid>
 
-        <ListBox x:Name="OrderItems" Grid.Row="1" ItemsSource="{Binding Path=Items}" SelectionChanged="OnSelectionChanged">
+        <ListBox x:Name="OrderItems" Grid.Row="1" ItemsSource="{Binding Path=Items}" SelectionChanged="OnSelectionChanged" IsSynchronizedWithCurrentItem="True">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Path=Description}"/>
+                    <StackPanel MinWidth="190">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="15"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding Path=Description}"/>
+                            <Button Grid.Column="1" Click="RemoveItem" Background="Red" Foreground="White">X</Button>
+                        </Grid>
                         <ListBox BorderBrush="White" ItemsSource="{Binding Path=Special}"/>
                     </StackPanel>
                 </DataTemplate>

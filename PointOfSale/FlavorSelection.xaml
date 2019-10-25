@@ -17,12 +17,12 @@
             </Style>
         </WrapPanel.Resources>
 
-        <Button>Cherry</Button>
-        <Button>Chocolate</Button>
-        <Button>Cola</Button>
-        <Button>Lime</Button>
-        <Button>Orange</Button>
-        <Button>Root Beer</Button>
-        <Button>Vanilla</Button>
+        <Button Click="OnFlavorSelect" Tag="Cherry">Cherry</Button>
+        <Button Click="OnFlavorSelect" Tag="Chocolate">Chocolate</Button>
+        <Button Click="OnFlavorSelect" Tag="Cola">Cola</Button>
+        <Button Click="OnFlavorSelect" Tag="Lime">Lime</Button>
+        <Button Click="OnFlavorSelect" Tag="Orange">Orange</Button>
+        <Button Click="OnFlavorSelect" Tag="RootBeer">Root Beer</Button>
+        <Button Click="OnFlavorSelect" Tag="Vanilla">Vanilla</Button>
     </WrapPanel>
 </Page>
