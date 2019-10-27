@@ -1,5 +1,4 @@
-﻿/*
- * Menu.cs
+﻿/* Menu.cs
  * Author: Connor Davis
  */
 using System;
@@ -122,13 +121,17 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Returns all available menu items as a string
+        /// </summary>
+        /// <returns>all available menu items as a string</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
 
             foreach(IMenuItem menuItem in AvailableMenuItems)
             {
-                sb.Append(menuItem.ToString());
+                sb.Append(menuItem.ToString() + "\n");
             }
 
             return sb.ToString();

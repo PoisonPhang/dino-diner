@@ -27,6 +27,10 @@ namespace PointOfSale
         private List<Button> drinks;
         private List<Button> options;
         private Drink drink;
+
+        /// <summary>
+        /// Constructs a new instance of DrinkSelection
+        /// </summary>
         public DrinkSelection()
         {
             InitializeComponent();

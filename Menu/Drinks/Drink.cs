@@ -1,5 +1,4 @@
-﻿/*
- * Drink.cs
+﻿/* Drink.cs
  * Author: Connor Davis
  */
 using System;

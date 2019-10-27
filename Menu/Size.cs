@@ -1,5 +1,4 @@
-﻿/*
- * Size.cs
+﻿/* Size.cs
  * Author: Connor Davis
  */
 using System;

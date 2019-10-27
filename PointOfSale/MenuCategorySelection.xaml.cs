@@ -23,6 +23,9 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuCategorySelection : Page
     {
+        /// <summary>
+        /// Constructs a new instance of MenuCategorySelection
+        /// </summary>
         public MenuCategorySelection()
         {
             InitializeComponent();

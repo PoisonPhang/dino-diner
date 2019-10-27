@@ -24,6 +24,9 @@ namespace PointOfSale
     /// </summary>
     public partial class FlavorSelection : Page
     {
+        /// <summary>
+        /// Constructs a new instance of FlavorSelection
+        /// </summary>
         public FlavorSelection()
         {
             InitializeComponent();

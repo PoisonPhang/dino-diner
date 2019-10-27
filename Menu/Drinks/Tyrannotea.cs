@@ -1,5 +1,4 @@
-﻿/*
- * Tyrannotea.cs
+﻿/* Tyrannotea.cs
  * Author: Connor Davis
  */
 using System;
@@ -113,6 +112,10 @@ namespace DinoDiner.Menu
             NotifyOfPropertyChanged("Special");
         }
 
+        /// <summary>
+        /// Returns the size, type, and name of tyrannotea as a string
+        /// </summary>
+        /// <returns>the size, type, and name of tyrannotea as a string</returns>
         public override string ToString()
         {
             if (sweet) return $"{size} Sweet Tyrannotea";

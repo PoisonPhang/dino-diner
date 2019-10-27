@@ -26,11 +26,18 @@ namespace PointOfSale
     {
         private Side side;
 
+        /// <summary>
+        /// Constructs a new instance of SideSelection
+        /// </summary>
         public SideSelection()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Constructs a new instance of SideSelection with an existing side
+        /// </summary>
+        /// <param name="side">Existing side to edit</param>
         public SideSelection(Side side)
         {
             InitializeComponent();

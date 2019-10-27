@@ -1,5 +1,4 @@
-﻿/*
- * PterodactylWings.cs
+﻿/* PterodactylWings.cs
  * Author: Connor Davis
  */
 using System;
@@ -47,6 +46,10 @@ namespace DinoDiner.Menu
             this.Calories = 318;
         }
 
+        /// <summary>
+        /// Returns the name of Pterodactyl Wings as a string
+        /// </summary>
+        /// <returns>the name of Pterodactyl Wings as a string</returns>
         public override string ToString()
         {
             return "Pterodactyl Wings";

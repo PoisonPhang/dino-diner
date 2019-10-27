@@ -1,5 +1,4 @@
-﻿/*
- * SodasaurusFlavor.cs
+﻿/* SodasaurusFlavor.cs
  * Author: Connor Davis
  */
 using System;

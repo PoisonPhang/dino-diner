@@ -24,6 +24,9 @@ namespace PointOfSale
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Constructs a new instance of MainWindow and creates a new order as well as setting the navigation
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

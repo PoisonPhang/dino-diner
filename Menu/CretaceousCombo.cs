@@ -1,5 +1,4 @@
-﻿/*
- * CretaceousCombo
+﻿/* CretaceousCombo
  * Author: Connor Davis
  */
 using System;
@@ -166,6 +165,10 @@ namespace DinoDiner.Menu
             Side = new Fryceritops();
         }
 
+        /// <summary>
+        /// Returns the entree of the combo fallowed by combo as a string
+        /// </summary>
+        /// <returns>the entree of the combo fallowed by combo as a string</returns>
         public override string ToString()
         {
             return $"{Entree.ToString()} Combo";

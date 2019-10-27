@@ -1,5 +1,4 @@
-﻿/*
- * Triceritots.cs
+﻿/* Triceritots.cs
  * Author: Connor Davis
  */
 using System;
@@ -64,6 +63,10 @@ namespace DinoDiner.Menu
             this.ingredients.AddRange(new List<string> { "Potato", "Salt", "Vegetable Oil" });
         }
 
+        /// <summary>
+        /// Returns the size and name of Triceritots as a string
+        /// </summary>
+        /// <returns>the size and name of Triceritots as a string</returns>
         public override string ToString()
         {
             return $"{size} Triceritots";

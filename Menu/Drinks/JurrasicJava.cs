@@ -1,5 +1,4 @@
-﻿/*
- * JurrasicJava.cs
+﻿/* JurrasicJava.cs
  * Author: Connor Davis
  */
 using System;
@@ -110,6 +109,10 @@ namespace DinoDiner.Menu
             NotifyOfPropertyChanged("Special");
         }
 
+        /// <summary>
+        /// Returns the size, type, and name of jurassic java as a string
+        /// </summary>
+        /// <returns>size, type, and name of jurassic java as a string</returns>
         public override string ToString()
         {
             if (Decaf) return $"{size} Decaf Jurassic Java";

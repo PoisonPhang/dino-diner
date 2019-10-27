@@ -1,5 +1,4 @@
-﻿/*
- * MezzorellaSticks.cs
+﻿/* MezzorellaSticks.cs
  * Author: Connor Davis
  */
 using System;
@@ -64,6 +63,10 @@ namespace DinoDiner.Menu
             this.ingredients.AddRange(new List<string> { "Breading", "Cheese Product", "Vegetable Oil" });
         }
 
+        /// <summary>
+        /// Returns the size and name of Mezzorella Sticks as a string
+        /// </summary>
+        /// <returns>the size and name of Mezzorella Sticks as a string</returns>
         public override string ToString()
         {
             return $"{size} Mezzorella Sticks";

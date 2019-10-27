@@ -1,5 +1,4 @@
-﻿/*
- * MeteorMacAndCheese.cs
+﻿/* MeteorMacAndCheese.cs
  * Author: Connor Davis
  */
 using System;
@@ -64,6 +63,10 @@ namespace DinoDiner.Menu
             this.ingredients.AddRange(new List<string> { "Macaroni Noodles", "Cheese Product", "Pork Sausage" });
         }
 
+        /// <summary>
+        /// Returns the size and name of Meteor Mac and Cheese
+        /// </summary>
+        /// <returns>the size and name of Meteor Mac and Cheese</returns>
         public override string ToString()
         {
             return $"{size} Meteor Mac and Cheese";

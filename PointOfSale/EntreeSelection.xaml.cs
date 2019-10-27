@@ -25,6 +25,10 @@ namespace PointOfSale
     public partial class EntreeSelection : Page
     {
         private Entree entree;
+
+        /// <summary>
+        /// Constructs a new instance of EntreeSelection
+        /// </summary>
         public EntreeSelection()
         {
             InitializeComponent();

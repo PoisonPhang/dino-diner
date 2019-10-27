@@ -21,8 +21,14 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderList : UserControl
     {
+        /// <summary>
+        /// Navigation Service for OrderList
+        /// </summary>
         public NavigationService NavigationService { get; set; }
 
+        /// <summary>
+        /// Constructs a new instance of OrderList
+        /// </summary>
         public OrderList()
         {
             InitializeComponent();

@@ -1,5 +1,4 @@
-﻿/*
- * Side.cs
+﻿/* Side.cs
  * Author: Connor Davis
  */
 using System;
@@ -9,9 +8,19 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// Base class for Side items
+    /// </summary>
     public abstract class Side : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Backing field for ingredients
+        /// </summary>
         protected List<string> ingredients = new List<string>();
+
+        /// <summary>
+        /// Backing field for size
+        /// </summary>
         protected Size size;
 
         /// <summary>

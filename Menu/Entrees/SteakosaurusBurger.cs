@@ -1,5 +1,4 @@
-﻿/*
- * SteakosaurusBurger.cs
+﻿/* SteakosaurusBurger.cs
  * Author: Connor Davis
  */
 using System;
@@ -98,6 +97,10 @@ namespace DinoDiner.Menu
             NotifyOfPropertyChanged("Special");
         }
 
+        /// <summary>
+        /// Returns the name of Steakosaurus Burger as a string
+        /// </summary>
+        /// <returns>the name of Steakosaurus Burger as a string</returns>
         public override string ToString()
         {
             return "Steakosaurus Burger";

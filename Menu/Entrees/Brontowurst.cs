@@ -84,6 +84,10 @@ namespace DinoDiner.Menu
             NotifyOfPropertyChanged("Special");
         }
 
+        /// <summary>
+        /// Returns the name of Brontowurst
+        /// </summary>
+        /// <returns>the name of Brontowurst</returns>
         public override string ToString()
         {
             return "Brontowurst";

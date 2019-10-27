@@ -72,6 +72,10 @@ namespace DinoDiner.Menu
             NotifyOfPropertyChanged("Special");
         }
 
+        /// <summary>
+        /// Returns the name of Prehistoric PB&J as a string
+        /// </summary>
+        /// <returns>the name of Prehistoric PB&J as a string</returns>
         public override string ToString()
         {
             return "Prehistoric PB&J";

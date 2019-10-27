@@ -88,11 +88,18 @@ namespace DinoDiner.Menu
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Constructs a new instance of Order
+        /// </summary>
         public Order()
         {
             items = new List<IOrderItem>();
         }
 
+        /// <summary>
+        /// Adds a new item to the current order
+        /// </summary>
+        /// <param name="item"></param>
         public void Add(IOrderItem item)
         {
             item.PropertyChanged += OnCollectionChanged;
@@ -100,12 +107,21 @@ namespace DinoDiner.Menu
             OnCollectionChanged(this, new EventArgs());
         }
 
+        /// <summary>
+        /// Removes an item from the current order
+        /// </summary>
+        /// <param name="item"></param>
         public void Remove(IOrderItem item)
         {
             items.Remove(item);
             OnCollectionChanged(this, new EventArgs());
         }
 
+        /// <summary>
+        /// Updates pricing and list information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnCollectionChanged(object sender, EventArgs args)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));

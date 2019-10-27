@@ -23,6 +23,9 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCombo : Page
     {
+        /// <summary>
+        /// Constructs a new instance of CustomizeCombo
+        /// </summary>
         public CustomizeCombo()
         {
             InitializeComponent();

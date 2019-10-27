@@ -1,5 +1,4 @@
-﻿/*
- * Sodasaurus.cs
+﻿/* Sodasaurus.cs
  * Author: Connor Davis
  */
 using System;
@@ -84,6 +83,10 @@ namespace DinoDiner.Menu
             this.Ice = true;
         }
 
+        /// <summary>
+        /// Retuns the size, flavor, and name of sodasaurus as a string
+        /// </summary>
+        /// <returns>the size, flavor, and name of sodasaurus as a string</returns>
         public override string ToString()
         {
             return $"{size} {Flavor} Sodasaurus";

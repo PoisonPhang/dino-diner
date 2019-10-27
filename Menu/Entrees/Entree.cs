@@ -1,5 +1,4 @@
-﻿/*
- * Entree.cs
+﻿/* Entree.cs
  * Author: Connor Davis
  */
 using System;
@@ -9,6 +8,9 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// Base class for Entree items
+    /// </summary>
     public abstract class Entree : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>

@@ -1,5 +1,4 @@
-﻿/*
- * IMenuItem.cs
+﻿/* IMenuItem.cs
  * Author: Connor Davis
  */
 using System;

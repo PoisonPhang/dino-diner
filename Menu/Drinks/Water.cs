@@ -1,5 +1,4 @@
-﻿/*
- * Water.cs
+﻿/* Water.cs
  * Author: Connor Davis
  */
 using System;
@@ -69,6 +68,10 @@ namespace DinoDiner.Menu
             NotifyOfPropertyChanged("Special");
         }
 
+        /// <summary>
+        /// Returns the size and name of water
+        /// </summary>
+        /// <returns>the size and name of water</returns>
         public override string ToString()
         {
             return $"{size} Water";

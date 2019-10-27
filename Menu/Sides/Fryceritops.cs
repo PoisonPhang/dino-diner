@@ -1,5 +1,4 @@
-﻿/*
- * Fryceritops.cs
+﻿/* Fryceritops.cs
  * Author: Connor Davis
  */
 using System;
@@ -65,6 +64,10 @@ namespace DinoDiner.Menu
             this.ingredients.AddRange(new List<string> { "Potato", "Salt", "Vegetable Oil" });
         }
 
+        /// <summary>
+        /// Returns the size and name of Fryceritops as a string
+        /// </summary>
+        /// <returns>the size and name of Fryceritops as a string</returns>
         public override string ToString()
         {
             return $"{size} Fryceritops";

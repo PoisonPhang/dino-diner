@@ -1,4 +1,4 @@
-﻿/*ComboSelection.xaml.cs
+﻿/* ComboSelection.xaml.cs
  * Author: Connor Davis
  */
 using System;
@@ -23,6 +23,9 @@ namespace PointOfSale
     /// </summary>
     public partial class ComboSelection : Page
     {
+        /// <summary>
+        /// Constructs a new instance of ComboSelection
+        /// </summary>
         public ComboSelection()
         {
             InitializeComponent();
