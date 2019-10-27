@@ -61,9 +61,9 @@ namespace MenuTest
             MockDrink drink = new MockDrink();
             Order order = new Order();
 
-            order.Items.Add(entree);
-            order.Items.Add(drink);
-            // Tax rate = 0.05
+            order.Add(entree);
+            order.Add(drink);
+            order.SalesTaxRate = 0.05;
 
             Assert.Equal(6.48, order.SubtotalCost, 2);
             Assert.Equal(0.324, order.SalesTaxCost, 2);
@@ -76,7 +76,7 @@ namespace MenuTest
             MockNegativeEntree negativeEntree = new MockNegativeEntree();
             Order order = new Order();
 
-            order.Items.Add(negativeEntree);
+            order.Add(negativeEntree);
 
             Assert.True(order.TotalCost >= 0);
         }
