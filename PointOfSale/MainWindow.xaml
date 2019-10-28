@@ -23,7 +23,20 @@
 
         <local:OrderList x:Name="OrderList" Grid.Column="1"></local:OrderList>
 
-        <Frame x:Name="OrderUI" LoadCompleted="OnLoadCompleted" DataContextChanged="OnDataContextChanged" 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+
+            <Frame x:Name="OrderUI" LoadCompleted="OnLoadCompleted" DataContextChanged="OnDataContextChanged" 
                Source="MenuCategorySelection.xaml" MinWidth="200"/>
+
+            <Button Click="OnReturnToCategorySelection" Grid.Row="1">Return To Category Selection</Button>
+        </Grid>
+
+        
+
+        
     </Grid>
 </Window>
