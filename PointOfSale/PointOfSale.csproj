@@ -67,6 +67,18 @@
     <Compile Include="CustomizePrehistoricPBJ.xaml.cs">
       <DependentUpon>CustomizePrehistoricPBJ.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomizePterodactylWings.xaml.cs">
+      <DependentUpon>CustomizePterodactylWings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeSteakosarusBurger.xaml.cs">
+      <DependentUpon>CustomizeSteakosarusBurger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeTKingBurger.xaml.cs">
+      <DependentUpon>CustomizeTKingBurger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomizeVelociWrap.xaml.cs">
+      <DependentUpon>CustomizeVelociWrap.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DrinkSelection.xaml.cs">
       <DependentUpon>DrinkSelection.xaml</DependentUpon>
     </Compile>
@@ -96,6 +108,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomizePrehistoricPBJ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizePterodactylWings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizeSteakosarusBurger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizeTKingBurger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizeVelociWrap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
