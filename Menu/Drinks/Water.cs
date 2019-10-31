@@ -21,6 +21,7 @@ namespace DinoDiner.Menu
             set
             {
                 size = value;
+                NotifyOfPropertyChanged("Price");
                 NotifyOfPropertyChanged("Size");
                 NotifyOfPropertyChanged("Description");
             }

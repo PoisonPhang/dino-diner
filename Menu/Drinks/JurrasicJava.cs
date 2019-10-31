@@ -94,7 +94,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Leaves room for cream in this instance of JurrasicJava
         /// </summary>
-        public void LeaveSpaceForCream()
+        public void LeaveRoomForCream()
         {
             SpaceForCream = true;
             NotifyOfPropertyChanged("Special");

@@ -115,7 +115,7 @@ namespace MenuTest.Drinks
         public void ShouldHaveSpaceForCreamAfterCallingLeaveSpaceForCream()
         {
             JurassicJava jurrasicJava = new JurassicJava();
-            jurrasicJava.LeaveSpaceForCream();
+            jurrasicJava.LeaveRoomForCream();
             Assert.True(jurrasicJava.SpaceForCream);
         }
 
@@ -178,7 +178,7 @@ namespace MenuTest.Drinks
         public void ShouldReturnAllSpecialsWhenNeeded()
         {
             JurassicJava jurrasicJava = new JurassicJava();
-            jurrasicJava.LeaveSpaceForCream();
+            jurrasicJava.LeaveRoomForCream();
             jurrasicJava.AddIce();
             jurrasicJava.Decaf = true;
 
@@ -191,7 +191,7 @@ namespace MenuTest.Drinks
         public void ShouldReturnSpaceForCream()
         {
             JurassicJava jurassicJava = new JurassicJava();
-            jurassicJava.LeaveSpaceForCream();
+            jurassicJava.LeaveRoomForCream();
 
             Assert.Contains("Leave Space For Cream", jurassicJava.Special);
         }
@@ -250,7 +250,7 @@ namespace MenuTest.Drinks
             JurassicJava jurassicJava = new JurassicJava();
             Assert.PropertyChanged(jurassicJava, "Special", () =>
             {
-                jurassicJava.LeaveSpaceForCream();
+                jurassicJava.LeaveRoomForCream();
             });
         }
 
