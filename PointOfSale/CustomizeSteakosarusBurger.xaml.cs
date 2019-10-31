@@ -22,11 +22,19 @@ namespace PointOfSale
     public partial class CustomizeSteakosarusBurger : Page
     {
         private SteakosaurusBurger steakosaurusBurger;
+        private CretaceousCombo combo;
 
         public CustomizeSteakosarusBurger(SteakosaurusBurger steakosaurusBurger)
         {
             InitializeComponent();
             this.steakosaurusBurger = steakosaurusBurger;
+        }
+
+        public CustomizeSteakosarusBurger(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.steakosaurusBurger = combo.Entree as SteakosaurusBurger;
+            this.combo = combo;
         }
 
         private void OnHoldBun(object sender, RoutedEventArgs args)
@@ -51,7 +59,14 @@ namespace PointOfSale
 
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            NavigationService.GoBack();
+            if (combo != null)
+            {
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
+            else
+            {
+                NavigationService.GoBack();
+            }
         }
     }
 }

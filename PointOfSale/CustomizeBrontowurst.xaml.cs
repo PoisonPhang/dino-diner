@@ -22,6 +22,7 @@ namespace PointOfSale
     public partial class CustomizeBrontowurst : Page
     {
         private Brontowurst brontowurst;
+        private CretaceousCombo combo;
 
         /// <summary>
         /// Constructs a new instance of CustomizeBrontowurst using an existing Brontowurst
@@ -31,6 +32,13 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.brontowurst = brontowurst;
+        }
+
+        public CustomizeBrontowurst(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.combo = combo;
+            brontowurst = this.combo.Entree as Brontowurst;
         }
 
         private void OnHoldBun(object sender, RoutedEventArgs args)
@@ -50,7 +58,14 @@ namespace PointOfSale
 
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            NavigationService.GoBack();
+            if (combo != null)
+            {
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            } else
+            {
+                //NavigationService.GoBack();
+            }
+            
         }
     }
 }

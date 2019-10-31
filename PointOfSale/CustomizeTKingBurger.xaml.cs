@@ -22,6 +22,7 @@ namespace PointOfSale
     public partial class CustomizeTKingBurger : Page
     {
         private TRexKingBurger tRexKingBurger;
+        private CretaceousCombo combo;
 
         /// <summary>
         /// Constructs a new instance of CustomizeTKingBurger with an existing TRexKingBurger
@@ -31,6 +32,13 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.tRexKingBurger = tRexKingBurger;
+        }
+
+        public CustomizeTKingBurger(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.tRexKingBurger = combo.Entree as TRexKingBurger;
+            this.combo = combo;
         }
 
         private void OnHoldBun(object sender, RoutedEventArgs args)

@@ -19,7 +19,7 @@
             </WrapPanel.Resources>
 
             
-            <Button Click="CustomizeCombo">
+            <Button Click="OnBrontowurstCombo">
                 <StackPanel>
                     <Image Width="50" Source="Assets/DinoDiner-16.png"/>
                     <TextBlock>Brontowurst Combo</TextBlock>
