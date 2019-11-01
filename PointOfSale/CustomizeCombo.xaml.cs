@@ -41,7 +41,7 @@ namespace PointOfSale
         /// <param name="e">Event args</param>
         private void SelectDrink(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.Navigate(new DrinkSelection(cretaceousCombo));
         }
 
         /// <summary>
@@ -51,7 +51,15 @@ namespace PointOfSale
         /// <param name="e">Event args</param>
         private void SelectSide(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SideSelection());
+            NavigationService.Navigate(new SideSelection(cretaceousCombo));
+        }
+
+        private void ChangeSize(object sender, RoutedEventArgs args)
+        {
+            if (sender is RadioButton radioButton)
+            {
+                cretaceousCombo.Size = (DinoDiner.Menu.Size)Enum.Parse(typeof(DinoDiner.Menu.Size), radioButton.Tag.ToString());
+            }
         }
     }
 }

@@ -25,6 +25,7 @@ namespace PointOfSale
     public partial class SideSelection : Page
     {
         private Side side;
+        private CretaceousCombo combo;
 
         /// <summary>
         /// Constructs a new instance of SideSelection
@@ -32,6 +33,12 @@ namespace PointOfSale
         public SideSelection()
         {
             InitializeComponent();
+        }
+
+        public SideSelection(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.combo = combo;
         }
 
         /// <summary>
@@ -49,7 +56,11 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 side = new Fryceritops();
-                order.Add(side);
+
+                if (combo != null)
+                    combo.Side = side;
+                else
+                    order.Add(side);
             }
         }
 
@@ -58,7 +69,11 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 side = new Triceritots();
-                order.Add(side);
+
+                if (combo != null)
+                    combo.Side = side;
+                else
+                    order.Add(side);
             }
         }
 
@@ -67,7 +82,11 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 side = new MeteorMacAndCheese();
-                order.Add(side);
+
+                if (combo != null)
+                    combo.Side = side;
+                else
+                    order.Add(side);
             }
         }
 
@@ -76,7 +95,11 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 side = new MezzorellaSticks();
-                order.Add(side);
+
+                if (combo != null)
+                    combo.Side = side;
+                else
+                    order.Add(side);
             }
         }
 
@@ -85,7 +108,11 @@ namespace PointOfSale
             if (sender is RadioButton radioButton && side != null)
             {
                 side.Size = (DinoDiner.Menu.Size)Enum.Parse(typeof(DinoDiner.Menu.Size), radioButton.Tag.ToString());
-                NavigationService.Navigate(new MenuCategorySelection());
+
+                if (combo != null)
+                    NavigationService.Navigate(new CustomizeCombo(combo));
+                else
+                    NavigationService.Navigate(new MenuCategorySelection());
             }
         }
     }

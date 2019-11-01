@@ -27,6 +27,7 @@ namespace PointOfSale
         private List<Button> drinks;
         private List<Button> options;
         private Drink drink;
+        private CretaceousCombo combo;
 
         /// <summary>
         /// Constructs a new instance of DrinkSelection
@@ -36,6 +37,14 @@ namespace PointOfSale
             InitializeComponent();
             drinks = new List<Button>() { BSodasaurus, BTryrannotea, BJurassicJava, BWater };
             options = new List<Button>() { BLemon, BFlavor, BDecaf, BSweet };
+        }
+
+        public DrinkSelection(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            drinks = new List<Button>() { BSodasaurus, BTryrannotea, BJurassicJava, BWater };
+            options = new List<Button>() { BLemon, BFlavor, BDecaf, BSweet };
+            this.combo = combo;
         }
 
         /// <summary>
@@ -58,7 +67,11 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 drink = new Sodasaurus();
-                order.Add(drink);
+
+                if (combo != null)
+                    combo.Drink = drink;
+                else
+                    order.Add(drink);
             }
 
         }
@@ -84,7 +97,11 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 drink = new Tyrannotea();
-                order.Add(drink);
+
+                if (combo != null)
+                    combo.Drink = drink;
+                else
+                    order.Add(drink);
             }
         }
 
@@ -108,7 +125,11 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 drink = new JurassicJava();
-                order.Add(drink);
+
+                if (combo != null)
+                    combo.Drink = drink;
+                else
+                    order.Add(drink);
             }
         }
 
@@ -132,7 +153,11 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 drink = new Water();
-                order.Add(drink);
+
+                if (combo != null)
+                    combo.Drink = drink;
+                else
+                    order.Add(drink);
             }
         }
 
@@ -163,7 +188,7 @@ namespace PointOfSale
         /// <param name="e">Event args</param>
         private void SelectFlavor(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new FlavorSelection());
+            NavigationService.Navigate(new FlavorSelection(drink));
         }
 
         private void OnMakeDecaf(object sender, RoutedEventArgs args)
@@ -184,7 +209,10 @@ namespace PointOfSale
 
         private void OnSelectDone(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new MenuCategorySelection());
+            if (combo != null)
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            else
+                NavigationService.Navigate(new MenuCategorySelection());
         }
     }
 }

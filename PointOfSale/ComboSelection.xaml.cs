@@ -73,14 +73,34 @@ namespace PointOfSale
             }
         }
 
-        /// <summary>
-        /// Progresses the display to CustomizeCombo
-        /// </summary>
-        /// <param name="sender">Element</param>
-        /// <param name="e">Event args</param>
-        private void CustomizeCombo(object sender, RoutedEventArgs e)
+        private void OnPrehistoricPBJCombo(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new CustomizeCombo(combo));
+            if (DataContext is Order order)
+            {
+                combo = new CretaceousCombo(new PrehistoricPBJ());
+                order.Add(combo);
+                NavigationService.Navigate(new CustomizePrehistoricPBJ(combo));
+            }
+        }
+
+        private void OnPterdactylWingsCombo(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                combo = new CretaceousCombo(new PterodactylWings());
+                order.Add(combo);
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
+        }
+
+        private void OnVelociWrapCombo(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                combo = new CretaceousCombo(new VelociWrap());
+                order.Add(combo);
+                NavigationService.Navigate(new CustomizeVelociWrap(combo));
+            }
         }
     }
 }

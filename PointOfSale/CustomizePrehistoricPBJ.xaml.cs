@@ -22,11 +22,19 @@ namespace PointOfSale
     public partial class CustomizePrehistoricPBJ : Page
     {
         private PrehistoricPBJ prehistoricPBJ;
+        private CretaceousCombo combo;
 
         public CustomizePrehistoricPBJ(PrehistoricPBJ prehistoricPBJ)
         {
             InitializeComponent();
             this.prehistoricPBJ = prehistoricPBJ;
+        }
+
+        public CustomizePrehistoricPBJ(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.prehistoricPBJ = combo.Entree as PrehistoricPBJ;
+            this.combo = combo;
         }
 
         private void OnHoldPeanutButter(object sender, RoutedEventArgs args)
@@ -41,7 +49,10 @@ namespace PointOfSale
 
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            NavigationService.GoBack();
+            if (combo != null)
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            else
+                NavigationService.GoBack();
         }
     }
 }

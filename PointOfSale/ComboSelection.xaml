@@ -25,37 +25,37 @@
                     <TextBlock>Brontowurst Combo</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Click="CustomizeCombo">
+            <Button Click="OnDinoNuggetsCombo">
                 <StackPanel>
                     <Image Width="50" Source="Assets/DinoDiner-17.png"/>
                     <TextBlock>Dino-Nuggets Combo</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Click="CustomizeCombo">
+            <Button Click="OnSteakosaurusCombo">
                 <StackPanel>
                     <Image Width="50" Source="Assets/DinoDiner-20.png"/>
                     <TextBlock>Steakosaurus Combo</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Click="CustomizeCombo">
+            <Button Click="OnTKingBurger">
                 <StackPanel>
                     <Image Width="50" Source="Assets/DinoDiner-21.png"/>
                     <TextBlock>T-Rex King Burger Combo</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Click="CustomizeCombo">
+            <Button Click="OnPrehistoricPBJCombo">
                 <StackPanel>
                     <Image Width="50" Source="Assets/DinoDiner-18.png"/>
                     <TextBlock>Prehistoric PB&amp;J Combo</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Click="CustomizeCombo">
+            <Button Click="OnPterdactylWingsCombo">
                 <StackPanel>
                     <Image Width="50" Source="Assets/DinoDiner-19.png"/>
                     <TextBlock>Pterdactyl Wings Combo</TextBlock>
                 </StackPanel>
             </Button>
-            <Button Click="CustomizeCombo">
+            <Button Click="OnVelociWrapCombo">
                 <StackPanel>
                     <Image Width="50" Source="Assets/DinoDiner-22.png"/>
                     <TextBlock>Veloci-Wrap Combo</TextBlock>

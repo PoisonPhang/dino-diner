@@ -45,9 +45,9 @@
                     </Style>
                 </StackPanel.Resources>
                 <Label HorizontalAlignment="Center" FontWeight="Bold">Combo Size</Label>
-                <RadioButton GroupName="Size" Content="Small"/>
-                <RadioButton GroupName="Size" Content="Medium"/>
-                <RadioButton GroupName="Size" Content="Large"/>
+                <RadioButton Click="ChangeSize" GroupName="Size" Tag="Small" Content="Small"/>
+                <RadioButton Click="ChangeSize" GroupName="Size" Tag="Medium" Content="Medium"/>
+                <RadioButton Click="ChangeSize" GroupName="Size" Tag="Large" Content="Large"/>
             </StackPanel>
         </Grid>
     </Grid>

@@ -83,7 +83,10 @@ namespace PointOfSale
 
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            NavigationService.GoBack();
+            if (combo != null)
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            else
+                NavigationService.GoBack();
         }
     }
 }

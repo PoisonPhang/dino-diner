@@ -24,19 +24,21 @@ namespace PointOfSale
     /// </summary>
     public partial class FlavorSelection : Page
     {
+        private Drink drink;
         /// <summary>
         /// Constructs a new instance of FlavorSelection
         /// </summary>
-        public FlavorSelection()
+        public FlavorSelection(Drink drink)
         {
             InitializeComponent();
+            this.drink = drink;
         }
 
-        private void OnFlavorSelect(Object sender, RoutedEventArgs args)
+        private void OnFlavorSelect(object sender, RoutedEventArgs args)
         {
             if (sender is Button button && DataContext is Order order)
             {
-                if (order.Items[order.Items.Length-1] is Sodasaurus sodasaurus)
+                if (drink is Sodasaurus sodasaurus)
                 {
                     sodasaurus.Flavor = (SodasaurusFlavor)Enum.Parse(typeof(SodasaurusFlavor), button.Tag.ToString());
                     NavigationService.GoBack();

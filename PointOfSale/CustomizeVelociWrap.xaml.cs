@@ -22,6 +22,7 @@ namespace PointOfSale
     public partial class CustomizeVelociWrap : Page
     {
         private VelociWrap velociWrap;
+        private CretaceousCombo combo;
 
         /// <summary>
         /// Constructs a new instance of CustomizeVelociWrap with an existing VelociWrap
@@ -31,6 +32,13 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.velociWrap = velociWrap;
+        }
+
+        public CustomizeVelociWrap(CretaceousCombo combo)
+        {
+            InitializeComponent();
+            this.velociWrap = combo.Entree as VelociWrap;
+            this.combo = combo;
         }
 
         private void OnHoldDressing(object sender, RoutedEventArgs args)
@@ -50,7 +58,10 @@ namespace PointOfSale
 
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            NavigationService.GoBack();
+            if (combo != null)
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            else
+                NavigationService.GoBack();
         }
     }
 }
