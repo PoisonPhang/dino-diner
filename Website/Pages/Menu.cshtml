@@ -4,20 +4,62 @@
     ViewData["Title"] = "Menu";
 }
 
+@using DinoDiner.Menu
+
 <h1>Menu</h1>
 
-<div id="menuItems">
-    <div id="combos">
-        <h2>Combos</h2>
+<div class="menu">
+    <div class="menu-section">
+        <h2 class="section-title">Combos</h2>
+        @foreach (IMenuItem combo in Model.Menu.AvailableCombos)
+        {
+            <div class="menu-item">
+                <h4>$@combo.Price @combo.ToString() @combo.Calories</h4>
+                @foreach (string ing in combo.Ingredients)
+                {
+                    <h5>- @ing</h5>
+                }
+            </div>
+        }
     </div>
-    <div id="entrees">
-        <h2>Entrees</h2>
+    <div class="menu-section">
+        <h2 class="section-title">Entrees</h2>
+        @foreach (IMenuItem entree in Model.Menu.AvailableEntrees)
+        {
+            <div class="menu-item">
+                <h4>$@entree.Price @entree.ToString() @entree.Calories</h4>
+                @foreach(string ing in entree.Ingredients)
+                {
+                    <h5>- @ing</h5>
+                }
+            </div>
+        }
     </div>
-    <div id="sides">
-        <h2>Sides</h2>
+    <div class="menu-section">
+        <h2 class="section-title">Sides</h2>
+        @foreach (IMenuItem side in Model.Menu.AvailableSides)
+        {
+            <div class="menu-item">
+                <h4>$@side.Price @side.ToString() @side.Calories</h4>
+                @foreach (string ing in side.Ingredients)
+                {
+                    <h5>- @ing</h5>
+                }
+            </div>
+        }
     </div>
-    <div id="drinks">
-        <h2>Drinks</h2>
+    <div class="menu-section">
+        <h2 class="section-title">Drinks</h2>
+        @foreach (IMenuItem drink in Model.Menu.AvailableDrinks)
+        {
+            <div class="menu-item">
+                <h4>$@drink.Price @drink.ToString() @drink.Calories</h4>
+                @foreach (string ing in drink.Ingredients)
+                {
+                    <h5>- @ing</h5>
+                }
+            </div>
+        }
     </div>
 </div>
 
