@@ -12,22 +12,51 @@ body {
     padding-right: 15px;
 }
 
+.menu-page {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+form {
+    width: 300px;
+    background-color: lightgray;
+    flex-grow: 0;
+    padding: 50px;
+}
+
 .menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-section {
+    border: solid black 2px;
+}
+
+.menu-item {
+    border: dashed black 1px;
+}
+
+.menu-half {
+    width: 50vw;
+}
+
+.filter-price {
+    width: 105px;
     display: flex;
     flex-direction: row;
 }
 
-.menu-section {
-    width: 400px;
-    border: 3px solid black
+.minimum-price {
+    width: 50px;
 }
 
-.menu-item {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+.maximum-price {
+    width: 50px;
 }
 
-.section-title {
-    border-bottom: 2px solid black;
+.filter-ingredients {
+    display: flex;
+    flex-direction: column;
 }
-
