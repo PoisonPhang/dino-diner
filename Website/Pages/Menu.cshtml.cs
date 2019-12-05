@@ -12,7 +12,11 @@ namespace Website.Pages
     {
         public Menu Menu { get; } = new Menu();
 
-        public List<IMenuItem> menuItems;
+        public IEnumerable<IMenuItem> menuItems;
+        public IEnumerable<CretaceousCombo> combos;
+        public IEnumerable<Entree> entrees;
+        public IEnumerable<Side> sides;
+        public IEnumerable<Drink> drinks;
 
         [BindProperty]
         public string search { get; set; }
@@ -37,6 +41,10 @@ namespace Website.Pages
         public void OnGet()
         {
             menuItems = Menu.AvailableMenuItems;
+            combos = menuItems.OfType<CretaceousCombo>();
+            entrees = menuItems.OfType<Entree>();
+            sides = menuItems.OfType<Side>();
+            drinks = menuItems.OfType<Drink>();
         }
 
         public void OnPost()
@@ -50,9 +58,30 @@ namespace Website.Pages
             }
 
             menuItems = Menu.AvailableMenuItems;
-            if (search != null) FilterName();
-            if (minimumPrice != null || maximumPrice != null) FilterPrice();
-            if (ingredientExclusions.Count > 0) FilterIngredintants();
+
+            if (search != null && search != "search")
+                menuItems = menuItems.Where(item => item.ToString().Contains(search, StringComparison.OrdinalIgnoreCase));
+            if (minimumPrice != null)
+                menuItems = menuItems.Where(item => item.Price >= minimumPrice);
+            if (maximumPrice != null)
+                menuItems = menuItems.Where(item => item.Price <= maximumPrice);
+            if (ingredientExclusions.Count > 0)
+                foreach (string ingredient in ingredientExclusions)
+                    menuItems = menuItems.Where(item => 
+                    {
+                        bool itemFlag = true;
+                        foreach (string ing in ingredientExclusions)
+                        {
+                            if (item.Ingredients.Contains(ing)) itemFlag = false;
+                        }
+                        if (itemFlag) return true;
+                        return false;
+                    });
+
+            combos = menuItems.OfType<CretaceousCombo>();
+            entrees = menuItems.OfType<Entree>();
+            sides = menuItems.OfType<Side>();
+            drinks = menuItems.OfType<Drink>();
         }
 
         private void FilterName()

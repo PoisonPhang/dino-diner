@@ -12,6 +12,11 @@ body {
     padding-right: 15px;
 }
 
+.navigation {
+    width: 100vw;
+    border-bottom: solid black 1px;
+}
+
 .menu-page {
     display: flex;
     flex-direction: row;

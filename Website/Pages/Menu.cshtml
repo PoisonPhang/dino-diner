@@ -14,21 +14,18 @@
             {
                 <div class="menu-section">
                     <h2 class="section-title">Combos</h2>
-                    @foreach (IMenuItem item in Model.menuItems)
+                    @foreach (CretaceousCombo combo in Model.combos)
                     {
-                        @if (item is CretaceousCombo combo)
-                        {
-                            <div class="menu-item">
-                                <h4>$@combo.Price @combo.ToString()</h4>
-                                <h5>@combo.Calories Calories</h5>
-                                <ul>
-                                    @foreach (string ing in combo.Ingredients)
-                                    {
-                                        <li>@ing</li>
-                                    }
-                                </ul>
-                            </div>
-                        }
+                        <div class="menu-item">
+                            <h4>$@combo.Price @combo.ToString()</h4>
+                            <h5>@combo.Calories Calories</h5>
+                            <ul>
+                                @foreach (string ing in combo.Ingredients)
+                                {
+                                    <li>@ing</li>
+                                }
+                            </ul>
+                        </div>
                     }
                 </div>
             }
@@ -36,21 +33,18 @@
             {
                 <div class="menu-section">
                     <h2 class="section-title">Entrees</h2>
-                    @foreach (IMenuItem item in Model.menuItems)
+                    @foreach (Entree entree in Model.entrees)
                     {
-                        @if (item is Entree entree)
-                        {
-                            <div class="menu-item">
-                                <h4>$@entree.Price @entree.ToString()</h4>
-                                <h5>@entree.Calories Calories</h5>
-                                <ul>
-                                    @foreach (string ing in entree.Ingredients)
-                                    {
-                                        <li>@ing</li>
-                                    }
-                                </ul>
-                            </div>
-                        }
+                        <div class="menu-item">
+                            <h4>$@entree.Price @entree.ToString()</h4>
+                            <h5>@entree.Calories Calories</h5>
+                            <ul>
+                                @foreach (string ing in entree.Ingredients)
+                                {
+                                    <li>@ing</li>
+                                }
+                            </ul>
+                        </div>
                     }
                 </div>
             }
@@ -58,21 +52,18 @@
             {
                 <div class="menu-section">
                     <h2 class="section-title">Sides</h2>
-                    @foreach (IMenuItem item in Model.menuItems)
+                    @foreach (Side side in Model.sides)
                     {
-                        if (item is Side side)
-                        {
-                            <div class="menu-item">
-                                <h4>$@side.Price @side.ToString()</h4>
-                                <h5>@side.Calories Calories</h5>
-                                <ul>
-                                    @foreach (string ing in side.Ingredients)
-                                    {
-                                        <li>@ing</li>
-                                    }
-                                </ul>
-                            </div>
-                        }
+                        <div class="menu-item">
+                            <h4>$@side.Price @side.ToString()</h4>
+                            <h5>@side.Calories Calories</h5>
+                            <ul>
+                                @foreach (string ing in side.Ingredients)
+                                {
+                                    <li>@ing</li>
+                                }
+                            </ul>
+                        </div>
                     }
                 </div>
             }
@@ -80,26 +71,24 @@
             {
                 <div class="menu-section">
                     <h2 class="section-title">Drinks</h2>
-                    @foreach (IMenuItem item in Model.menuItems)
+                    @foreach (Drink drink in Model.drinks)
                     {
-                        if (item is Drink drink)
-                        {
-                            <div class="menu-item">
-                                <h4>$@drink.Price @drink.ToString()</h4>
-                                <h5>@drink.Calories Calories</h5>
-                                <ul>
-                                    @foreach (string ing in drink.Ingredients)
-                                    {
-                                        <li>@ing</li>
-                                    }
-                                </ul>
-                            </div>
-                        }
+                        <div class="menu-item">
+                            <h4>$@drink.Price @drink.ToString()</h4>
+                            <h5>@drink.Calories Calories</h5>
+                            <ul>
+                                @foreach (string ing in drink.Ingredients)
+                                {
+                                    <li>@ing</li>
+                                }
+                            </ul>
+                        </div>
                     }
                 </div>
             }
         </div>
     </div>
+
     <form method="post" class="menu-filter">
         <input type="text" id="search" name="search" value="search" />
         <input type="submit" value="Search and Filter" />
