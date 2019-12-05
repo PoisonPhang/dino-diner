@@ -10,15 +10,39 @@
     <div class="menu-half">
         <h1>Menu</h1>
         <div class="menu">
-            @if (Model.displayCombos)
+            @if (Model.combos.Count() > 0 && Model.displayCombos)
             {
                 <div class="menu-section">
                     <h2 class="section-title">Combos</h2>
                     @foreach (CretaceousCombo combo in Model.combos)
                     {
                         <div class="menu-item">
-                            <h4>$@combo.Price @combo.ToString()</h4>
-                            <h5>@combo.Calories Calories</h5>
+                            <h4>@combo.ToString()</h4>
+                            <table class="menu-item-breakdown">
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Price</th>
+                                    <th>Calories</th>
+                                </tr>
+                                <tr>
+                                    @(combo.Size = Size.Small)
+                                    <td>Small</td>
+                                    <td>$@combo.Price</td>
+                                    <td>@combo.Calories</td>
+                                </tr>
+                                <tr>
+                                    @(combo.Size = Size.Medium)
+                                    <td>Medium</td>
+                                    <td>$@combo.Price</td>
+                                    <td>@combo.Calories</td>
+                                </tr>
+                                <tr>
+                                    @(combo.Size = Size.Large)
+                                    <td>Large</td>
+                                    <td>$@combo.Price</td>
+                                    <td>@combo.Calories</td>
+                                </tr>
+                            </table>
                             <ul>
                                 @foreach (string ing in combo.Ingredients)
                                 {
@@ -29,7 +53,7 @@
                     }
                 </div>
             }
-            @if (Model.displayEntrees)
+            @if (Model.entrees.Count() > 0 && Model.displayEntrees)
             {
                 <div class="menu-section">
                     <h2 class="section-title">Entrees</h2>
@@ -48,15 +72,39 @@
                     }
                 </div>
             }
-            @if (Model.displaySides)
+            @if (Model.sides.Count() > 0 && Model.displaySides)
             {
                 <div class="menu-section">
                     <h2 class="section-title">Sides</h2>
                     @foreach (Side side in Model.sides)
                     {
                         <div class="menu-item">
-                            <h4>$@side.Price @side.ToString()</h4>
-                            <h5>@side.Calories Calories</h5>
+                            <h4>@side.ToString()</h4>
+                            <table class="menu-item-breakdown">
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Price</th>
+                                    <th>Calories</th>
+                                </tr>
+                                <tr>
+                                    @(side.Size = Size.Small)
+                                    <td>Small</td>
+                                    <td>$@side.Price</td>
+                                    <td>@side.Calories</td>
+                                </tr>
+                                <tr>
+                                    @(side.Size = Size.Medium)
+                                    <td>Medium</td>
+                                    <td>$@side.Price</td>
+                                    <td>@side.Calories</td>
+                                </tr>
+                                <tr>
+                                    @(side.Size = Size.Large)
+                                    <td>Large</td>
+                                    <td>$@side.Price</td>
+                                    <td>@side.Calories</td>
+                                </tr>
+                            </table>
                             <ul>
                                 @foreach (string ing in side.Ingredients)
                                 {
@@ -67,15 +115,39 @@
                     }
                 </div>
             }
-            @if (Model.displayDrinks)
+            @if (Model.drinks.Count() > 0 && Model.displayDrinks)
             {
                 <div class="menu-section">
                     <h2 class="section-title">Drinks</h2>
                     @foreach (Drink drink in Model.drinks)
                     {
                         <div class="menu-item">
-                            <h4>$@drink.Price @drink.ToString()</h4>
-                            <h5>@drink.Calories Calories</h5>
+                            <h4>@drink.ToString()</h4>
+                            <table class="menu-item-breakdown">
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Price</th>
+                                    <th>Calories</th>
+                                </tr>
+                                <tr>
+                                    @(drink.Size = Size.Small)
+                                    <td>Small</td>
+                                    <td>$@drink.Price</td>
+                                    <td>@drink.Calories</td>
+                                </tr>
+                                <tr>
+                                    @(drink.Size = Size.Medium)
+                                    <td>Medium</td>
+                                    <td>$@drink.Price</td>
+                                    <td>@drink.Calories</td>
+                                </tr>
+                                <tr>
+                                    @(drink.Size = Size.Large)
+                                    <td>Large</td>
+                                    <td>$@drink.Price</td>
+                                    <td>@drink.Calories</td>
+                                </tr>
+                            </table>
                             <ul>
                                 @foreach (string ing in drink.Ingredients)
                                 {
